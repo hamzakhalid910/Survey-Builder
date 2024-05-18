@@ -116,18 +116,18 @@ function SignUp() {
               </p>
 
               {/* Checkbox */}
-              <div className="flex border-2 mt-4">
-                <div className="border-2 w-[5%] flex justify-center">
+              <div className="flex  mt-4">
+                <div className="w-[4%] mt-0.5 ">
                   <input
-                    className=" border-2"
+                    className=""
                     type="checkbox"
                     name="checkbox"
                     value={formData.checkbox}
                     onChange={handleChange}
                   />
                 </div>
-                <div className="border-2 w-[100%] md:w-[70%] flex items-center">
-                  <span className="ml-2 text-[#828282]">
+                <div className=" w-[100%] md:w-[70%] flex items-center">
+                  <span className=" text-[#828282]">
                     By creating an account, you agree to the{" "}
                     <span className="text-[#3498DB]">Terms & Conditions</span>{" "}
                     and our{" "}
