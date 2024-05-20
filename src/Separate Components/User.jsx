@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { DropDownSVG } from "../Svg Components/DropDownSVG";
+import { SearchTemplates } from "./SearchTemplates";
 
 //User Object
 const userObject = {
@@ -51,6 +52,8 @@ export function User() {
         </button>
         {showDropDown && <DropDownMenu />}
       </div>
+
+      <SearchTemplates />
     </>
   );
 }
