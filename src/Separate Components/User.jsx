@@ -53,7 +53,7 @@ export function User() {
         {showDropDown && <DropDownMenu />}
       </div>
 
-      <SearchTemplates />
+      {/* <SearchTemplates /> */}
     </>
   );
 }
