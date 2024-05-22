@@ -4,6 +4,7 @@ import StartSurveying from "../Separate Components/StartSurveying";
 import { SearchTemplates } from "../Separate Components/SearchTemplates";
 import ListGridView from "../Separate Components/ListGridView";
 import SurveyTemplates from "../Components/SurveyTemplates";
+import { NewSurveyButton } from "../Comon Components/NewSurveyButton";
 
 function Dashboard() {
   return (
@@ -19,9 +20,7 @@ function Dashboard() {
             How would you best describe your surveying and forms expertise?
           </h1>
           <div className="flex w-[20%] flex-grow items-center justify-end">
-            <button className="text-white bg-[#3498DB] rounded-md px-5 py-2">
-              New Survey
-            </button>
+            <NewSurveyButton />
           </div>
         </div>
 
