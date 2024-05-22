@@ -9,7 +9,11 @@ import { User } from "./Separate Components/User";
 import Header from "./Components/Header";
 import Dashboard from "./Pages/Dashboard";
 import CreateSurvey from "./Pages/CreateSurvey";
+<<<<<<< HEAD
 import BuildSurveyWithAi from "./Pages/BuildSurveyWithAi";
+=======
+import SurveyDashboard from "./Pages/SurveyDashboard";
+>>>>>>> ec6f4821ea4eb94aa554d5ae9d0e3921ca2df0e8
 
 function App() {
   return (
@@ -21,7 +25,11 @@ function App() {
         <Route path="/header" element={<Header />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/createsurvey" element={<CreateSurvey />}></Route>
+<<<<<<< HEAD
         <Route path="/buildSurveyWithAI" element={<BuildSurveyWithAi />}></Route>
+=======
+        <Route path="/surveydashboard" element={<SurveyDashboard/>}></Route>
+>>>>>>> ec6f4821ea4eb94aa554d5ae9d0e3921ca2df0e8
       </Routes>
     </Router>
   );
