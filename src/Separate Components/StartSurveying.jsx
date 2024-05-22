@@ -2,12 +2,20 @@ import React from "react";
 import { StartFromScratch } from "../Svg Components/StartFromScratch";
 import { QuickTemplateSVG } from "../Svg Components/QuickTemplateSVG";
 import { BuildWithAiSVG } from "../Svg Components/BuildWithAiSVG";
+import { useNavigate } from "react-router-dom";
 
 function StartSurveying() {
+  const navigate = useNavigate();
+
   return (
     <div className="flex w-full h-[30%] space-x-[6%]  border-2 ">
       <div className="flex w-[33%] bg-[#D3EFF880] p-4 border-2 rounded-md content-start">
-        <button className="block text-start">
+        <button
+          className="block text-start"
+          onClick={() => {
+            navigate("/createsurvey");
+          }}
+        >
           <div className="flex">
             <h1 className="font-semibold w-[70%] border-2">
               Start from scratch
