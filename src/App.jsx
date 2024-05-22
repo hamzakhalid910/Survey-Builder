@@ -8,6 +8,7 @@ import SignIn from "./Pages/SignIn";
 import { User } from "./Separate Components/User";
 import Header from "./Components/Header";
 import Dashboard from "./Pages/Dashboard";
+import CreateSurvey from "./Pages/CreateSurvey";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/user" element={<User />} />
         <Route path="/header" element={<Header />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/createsurvey" element={<CreateSurvey />}></Route>
       </Routes>
     </Router>
   );

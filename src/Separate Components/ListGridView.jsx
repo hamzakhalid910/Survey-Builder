@@ -6,7 +6,10 @@ function ListGridView() {
   return (
     <>
       <div className="flex">
-        <button className="border border-[#00000066] px-3 rounded-l py-1 flex flex-row items-center">
+        <button
+          className="border bg-gray-300 border-[#00000066] px-3 rounded-l py-1 flex flex-row items-center"
+          // onClick={}
+        >
           <div className="flex ">
             <ListIconSVG />
           </div>
