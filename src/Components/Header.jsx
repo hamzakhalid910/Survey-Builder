@@ -8,18 +8,20 @@ import { useNavigate } from "react-router-dom";
 function Header() {
   const [activeLink, setActiveLink] = useState(location.pathname);
   const navigate = useNavigate();
-  const handleSetActiveLink = () => {
-    navigate(`/${link}`);
+
+  const handleSetActiveLink = (link) => {
+    navigate(`${link}`);
     setActiveLink(link);
   };
 
   return (
-    <div className=" flex flex-row w-full h-[20%] bg-[#E9F4FE]">
-      <div className="ml-[8%] border-2 w-[10%] h-[20%] z-10 p-2">
+    <div className="flex w-full h-full bg-[#E9F4FE]">
+      <div className="ml-[8%] w-[10%] h-[20%] z-10 p-2">
         {/* <DashboardLogoSVG /> */}
-        <img className="" src="src\Images\Group 7.png" alt="Builder Logo" />
+        <img className="px-2 pb-3" src="src\Images\Group 7.png" alt="Builder Logo" />
       </div>
       <div className="flex w-[32%] ml-[4%] space-x-4 px-[4%] items-center">
+        {/* Dashboard Button */}
         <button
           className={` ${
             activeLink === "/dashboard"
@@ -31,27 +33,28 @@ function Header() {
           Dashboard
         </button>
 
+        {/* MySurveys Button */}
         <button
           className={` ${
-            activeLink === "/createsurvey"
+            activeLink === "/mysurveys"
               ? "text-[#3498DB] font-semibold underline"
               : "text-[#828282]"
           }`}
-          onClick={() => handleSetActiveLink("/createsurvey")}
+          onClick={() => handleSetActiveLink("/mysurveys")}
         >
           My Surveys
         </button>
       </div>
 
       {/* Upgrade Plan Button */}
-      <div className="flex w-[17%] border justify-center items-center">
+      <div className="flex w-[17%] justify-center items-center">
         <button className="text-[#3498DB] border border-[#3498DB]  rounded-lg p-2 font-semibold">
           Upgrade Plan
         </button>
       </div>
 
       {/* Notifications */}
-      <div className="flex w-[3%] border items-center justify-center">
+      <div className="flex w-[3%] items-center justify-center">
         <button
           onClick={() => {
             console.log("Notifications");
@@ -62,12 +65,12 @@ function Header() {
       </div>
 
       {/* Language */}
-      <div className="flex w-[10%] border items-center">
+      <div className="flex w-[10%] items-center">
         <Language />
       </div>
 
       {/* User */}
-      <div className="flex w-[12%] mr-[8%] border  items-center justify-end px-1 ">
+      <div className="flex w-[12%] mr-[8%] items-center justify-end px-1 ">
         <User />
       </div>
     </div>

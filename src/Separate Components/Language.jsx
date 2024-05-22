@@ -59,25 +59,25 @@ export function Language() {
 
   return (
     <>
-      <div className="flex w-full border-2 ">
-        <div className="flex w-[80%] border">
+      <div className="flex ml-[8%] w-full items-center justify-center">
+        <div className="flex w-[40%] ">
           {/* Flag Div */}
-          <div className="w-[20%] flex justify-center items-center">
+          <div className=" w-[50%] flex justify-center items-center">
             <img className="w-5 h-5 rounded-full" src={selectedFlag} alt="" />
           </div>
 
-          <h1 className=" flex w-[40%] font-semibold border pl-2">
+          <h1 className=" flex  w-[50%] font-semibold pl-2">
             {selectedLanguage}
           </h1>
         </div>
 
-        <div className="flex">
-          <button className="ml-1 w-[0%]" onClick={toggleDropDown}>
+        <div className="flex mt-1 w-[60%]">
+          <button className="ml-1" onClick={toggleDropDown}>
             <DropDownSVG />
           </button>
         </div>
         {showDropDown && (
-          <div className="absolute mt-6 ml-[-0.4%] bg-white w-[10%] px-4 py-4 rounded-sm shadow-lg z-10">
+          <div className="absolute mt-[17%] ml-[-0.4%] bg-white w-[10%] px-4 py-4 rounded-sm shadow-lg z-10">
             {languages.map((languageObj, index) => (
               <button
                 className="flex items-center text-sm border mb-1 text-[#828282] w-[100%]" // Use flexbox to align flag and language

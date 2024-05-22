@@ -11,6 +11,7 @@ import Dashboard from "./Pages/Dashboard";
 import CreateSurvey from "./Pages/CreateSurvey";
 import BuildSurveyWithAi from "./Pages/BuildSurveyWithAi";
 import SurveyDashboard from "./Pages/SurveyDashboard";
+import MySurveys from "./Pages/MySurveys";
 
 function App() {
   return (
@@ -21,9 +22,13 @@ function App() {
         <Route path="/user" element={<User />} />
         <Route path="/header" element={<Header />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/mysurveys" element={<MySurveys />}></Route>
         <Route path="/createsurvey" element={<CreateSurvey />}></Route>
-        <Route path="/surveydashboard" element={<SurveyDashboard/>}></Route>
-        <Route path="/buildSurveyWithAI" element={<BuildSurveyWithAi />}></Route>
+        <Route path="/surveydashboard" element={<SurveyDashboard />}></Route>
+        <Route
+          path="/buildSurveyWithAI"
+          element={<BuildSurveyWithAi />}
+        ></Route>
       </Routes>
     </Router>
   );

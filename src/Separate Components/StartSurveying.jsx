@@ -8,19 +8,20 @@ function StartSurveying() {
   const navigate = useNavigate();
 
   return (
-    <div className="flex w-full h-[30%] space-x-[6%]  border-2 ">
-      <div className="flex w-[33%] bg-[#D3EFF880] p-4 border-2 rounded-md content-start">
+    <div className="flex w-full h-full space-x-[6%] ">
+      {/* Start From Scratch Button */}
+      <div className="flex w-[33%] bg-[#D3EFF880] border  rounded-md content-start">
         <button
-          className="block text-start"
+          className="block text-start px-8 py-10 "
           onClick={() => {
             navigate("/createsurvey");
           }}
         >
           <div className="flex">
-            <h1 className="font-semibold w-[70%] border-2">
+            <h1 className="font-semibold w-[70%] ">
               Start from scratch
             </h1>
-            <div className="w-[30%] border pl-[15%]">
+            <div className="items-end justify-end flex w-[30%]">
               <StartFromScratch />
             </div>
           </div>
@@ -30,13 +31,14 @@ function StartSurveying() {
         </button>
       </div>
 
-      <div className="flex w-[33%] bg-[#EAE9FB80] p-4 border-2 rounded-md content-start">
-        <button className="block text-start">
+      {/* Use a Quick Template Button */}
+      <div className="flex w-[33%] bg-[#EAE9FB80] border rounded-md content-start">
+        <button className="block text-start p-8">
           <div className="flex">
-            <h1 className="font-semibold w-[70%] border-2">
+            <h1 className="font-semibold w-[70%]">
               Use a quick template
             </h1>
-            <div className="w-[30%] border pl-[15%]">
+            <div className="w-[30%]  items-end justify-end flex">
               <QuickTemplateSVG />
             </div>
           </div>
@@ -48,11 +50,11 @@ function StartSurveying() {
       </div>
 
       {/* Build Qith AI */}
-      <div className="flex w-[33%] bg-[#F4E1FE80] p-4 border-2 rounded-md content-start">
-        <button className="block text-start">
+      <div className="flex w-[33%] bg-[#F4E1FE80] border rounded-md content-start">
+        <button className="block text-start p-8">
           <div className="flex">
-            <h1 className="font-semibold w-[70%] border-2">Build with AI </h1>
-            <div className="w-[30%] border pl-[15%]">
+            <h1 className="font-semibold w-[70%] ">Build with AI </h1>
+            <div className="w-[30%] items-end justify-end flex">
               <BuildWithAiSVG />
             </div>
           </div>

@@ -9,42 +9,43 @@ import { NewSurveyButton } from "../Comon Components/NewSurveyButton";
 function Dashboard() {
   return (
     <>
-      <div className="border">
-        <Header />
-      </div>
+      <div className="h-screen">
+        <div className="h-[13%]">
+          <Header />
+        </div>
 
-      <div className="mx-[8%]">
         {/* New Survey Div */}
-        <div className="flex border-2">
-          <h1 className="w-[80%] border-2  pt-[4%] pb-[3%] font-semibold">
+        <div className="flex  mx-[8%] h-[15%] ">
+          <h1 className="w-[80%]  pt-[3%] pb-[2%] font-semibold">
             How would you best describe your surveying and forms expertise?
           </h1>
+
           <div className="flex w-[20%] flex-grow items-center justify-end">
             <NewSurveyButton />
           </div>
         </div>
 
         {/* Start Surveying */}
-        <div className="">
+        <div className="mx-[8%] h-[27%]">
           <StartSurveying />
         </div>
 
-        <div className="flex border-2 ">
-          <h1 className="w-[60%] border-2 pt-[3%] pb-[2%] font-semibold text-[#3498DB]">
+        <div className="flex mx-[8%] h-[12%] ">
+          <h1 className="w-[60%]  pt-[2.5%] pb-[1.5%] font-semibold text-[#3498DB]">
             Explore Templates Bank
           </h1>
 
-          <div className="flex border-2 items-center w-[25%]">
+          <div className="flex items-center w-[25%] ">
             <SearchTemplates />
           </div>
 
-          <div className="flex w-[15%] justify-end items-center border-2">
+          <div className="flex w-[15%] justify-end items-center">
             <ListGridView />
           </div>
         </div>
 
         {/* Survey Templates Div */}
-        <div className="">
+        <div className="mx-[8%]">
           <SurveyTemplates />
         </div>
       </div>
