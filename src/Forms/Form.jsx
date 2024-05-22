@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import CustomDropdown from "../Components/CustomDropdown";
 import FormInput from "../Components/FromInput";
 import SubmitButton from "../Components/SubmitButton";
-
+import Header from "../Components/Header";
 const projectTypes = [
   "Web Development",
   "Mobile App Development",
@@ -54,9 +54,7 @@ const Form = () => {
   return (
     <div className="min-h-screen bg-white flex flex-col items-center">
       {/* Static header */}
-      <div className="h-24 bg-custom-gradient flex items-center justify-center text-black w-full">
-        Header Content Here
-      </div>
+      <Header></Header>
 
       {/* Form */}
       <div className="flex w-full px-4 sm:px-32 mt-20">
