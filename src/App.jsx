@@ -9,6 +9,7 @@ import { User } from "./Separate Components/User";
 import Header from "./Components/Header";
 import Dashboard from "./Pages/Dashboard";
 import CreateSurvey from "./Pages/CreateSurvey";
+import BuildSurveyWithAi from "./Pages/BuildSurveyWithAi";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/header" element={<Header />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/createsurvey" element={<CreateSurvey />}></Route>
+        <Route path="/buildSurveyWithAI" element={<BuildSurveyWithAi />}></Route>
       </Routes>
     </Router>
   );
