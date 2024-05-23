@@ -4,7 +4,7 @@ import StartSurveying from "../Separate Components/StartSurveying";
 import { SearchTemplates } from "../Separate Components/SearchTemplates";
 import ListGridView from "../Separate Components/ListGridView";
 import SurveyTemplates from "../Components/SurveyTemplates";
-import { NewSurveyButton } from "../Comon Components/NewSurveyButton";
+import { NewSurveyButton } from "../Components/Common/NewSurveyButton";
 
 function Dashboard() {
   return (

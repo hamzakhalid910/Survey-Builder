@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import DropDown from "../Icons Svg Components/DropDownIcon";
-import Search from "../Icons Svg Components/SearchIconPlain";
+import DropDown from "../../Icons Svg Components/DropDownIcon";
+import Search from "../../Icons Svg Components/SearchIconPlain";
+import "./style.scss";
 
 const CustomDropdown = ({ options, value, onChange, placeholder }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,7 +31,7 @@ const CustomDropdown = ({ options, value, onChange, placeholder }) => {
   };
 
   return (
-    <div className="relative w-full md:w-[140%]">
+    <div className="custom-dropdown--parent">
       <input
         type="text"
         value={searchTerm}
