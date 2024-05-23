@@ -1,0 +1,28 @@
+// Define variables for commonly used values
+$border-color: #CEE1FC;
+
+// Define styles for the FormInput component
+.FormInput {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+
+  label {
+    display: block;
+    color: #4a5568; // Equivalent to Tailwind's text-gray-700
+    margin-bottom: 0.5rem;
+    font-weight: 500; // Equivalent to Tailwind's font-medium
+  }
+
+  input {
+    width: 100%; // Equivalent to Tailwind's w-full
+    max-width: 140%; // Equivalent to Tailwind's md:w-[140%]
+    padding: 0.5rem 1rem; // Equivalent to Tailwind's px-3 py-2
+    border: 1.5px solid $border-color; // Equivalent to Tailwind's border-[1.5px] border-[#CEE1FC]
+    border-radius: 0.5rem; // Equivalent to Tailwind's rounded-lg
+    outline: none; // Equivalent to Tailwind's focus:outline-none
+
+    &:focus {
+      // Add focus styles if needed
+    }
+  }
+}

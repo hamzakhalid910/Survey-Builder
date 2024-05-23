@@ -1,5 +1,5 @@
 import React from "react";
-import Form from "../Forms/Form";
+import Form from "../Components/Form/index";
 
 function CreateSurvey() {
   return (
