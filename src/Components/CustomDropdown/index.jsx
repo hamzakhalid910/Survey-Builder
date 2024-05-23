@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import DropDown from "../../Icons Svg Components/DropDownIcon";
 import Search from "../../Icons Svg Components/SearchIconPlain";
-import "./style.scss";
+import "./CustomDropdown.scss"; // Import the SCSS file
 
 const CustomDropdown = ({ options, value, onChange, placeholder }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,8 +37,6 @@ const CustomDropdown = ({ options, value, onChange, placeholder }) => {
         value={searchTerm}
         onChange={handleInputChange}
         placeholder={placeholder}
-        className="block w-full px-7 py-2 border-[1.5px] border-[#CEE1FC] rounded-lg focus:outline-none"
-        onClick={handleArrowClick}
       />
       <div className="absolute inset-y-0 left-2 flex items-center pr-2">
         <Search />

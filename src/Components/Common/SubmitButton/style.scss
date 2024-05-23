@@ -1,0 +1,28 @@
+// Define variables for commonly used values
+$primary-color: #3182ce; // Assuming this is your primary color, adjust as needed
+$button-font: "Lato", sans-serif; // Assuming this is your font, adjust as needed
+
+.SubmitButton {
+  display: flex;
+  justify-content: center;
+  margin-left: 10rem; // Equivalent to Tailwind's md:ml-40
+  margin-top: 3.5rem; // Equivalent to Tailwind's mt-14
+
+  button {
+    width: 10rem; // Equivalent to Tailwind's w-40
+    background-color: $primary-color; // Equivalent to Tailwind's bg-primary
+    font-family: $button-font; // Equivalent to Tailwind's font-Lato
+    color: #fff; // Equivalent to Tailwind's text-white
+    padding: 0.5rem 1rem; // Adjust as needed
+    border-radius: 0.5rem; // Equivalent to Tailwind's rounded-lg
+    margin-top: 2rem; // Equivalent to Tailwind's mt-8
+
+    &:hover {
+      // Define hover styles if needed
+    }
+
+    &:focus {
+      // Define focus styles if needed
+    }
+  }
+}
