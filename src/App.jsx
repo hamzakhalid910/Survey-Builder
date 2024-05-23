@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import SignUp from "./Pages/SignUp";
 import SignIn from "./Pages/SignIn";
 import { User } from "./Separate Components/User";
-import Header from "./Components/Header";
+import Header from "./Components/Common/Header/index";
 import Dashboard from "./Pages/Dashboard";
 import CreateSurvey from "./Pages/CreateSurvey";
 import BuildSurveyWithAi from "./Pages/BuildSurveyWithAi";
