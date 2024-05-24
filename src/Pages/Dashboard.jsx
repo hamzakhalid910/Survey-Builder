@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "../Components/Header";
+import Header from "../Components/Common/Header/index";
 import StartSurveying from "../Separate Components/StartSurveying";
 import { SearchTemplates } from "../Separate Components/SearchTemplates";
 import ListGridView from "../Separate Components/ListGridView";

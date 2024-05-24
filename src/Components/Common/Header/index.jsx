@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { DashboardLogoSVG } from "../Svg Components/DashboardLogoSVG";
+
+// import { DashboardLogoSVG } from ".../Svg Components/DashboardLogoSVG";
 import { User } from "../Separate Components/User";
 import { Language } from "../Separate Components/Language";
 import { NotificationSVG } from "../Svg Components/NotificationsSVG";
@@ -18,7 +19,11 @@ function Header() {
     <div className="flex w-full h-full bg-[#E9F4FE]">
       <div className="ml-[8%] w-[10%] h-[20%] z-10 p-2">
         {/* <DashboardLogoSVG /> */}
-        <img className="px-2 pb-3" src="src\Images\Group 7.png" alt="Builder Logo" />
+        <img
+          className="px-2 pb-3"
+          src="src\Images\Group 7.png"
+          alt="Builder Logo"
+        />
       </div>
       <div className="flex w-[32%] ml-[4%] space-x-4 px-[4%] items-center">
         {/* Dashboard Button */}
