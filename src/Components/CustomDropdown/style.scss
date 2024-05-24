@@ -14,12 +14,13 @@
   $primary-color: #3498DB;
   font-weight: 400;
 
-  input {
+input {
     @include common-styles(0.5rem 2.5rem 0.5rem 2rem, 1.5px solid #CEE1FC, 0.5rem, 400, #000, #fff, none);
     width: 90%;
     outline: none;
     position: relative;
-
+    
+    
     & ~ .custom-dropdown--search-icon {
       position: absolute;
       top: 50%;

@@ -39,7 +39,10 @@ $paragraph-color: #718096; // Assuming this is your paragraph color, adjust as n
 
         &--input {
           width: 100%; // Make the input field full width
+         
+          
         }
+        
 
         &--dropdown {
           width: 100%; 
@@ -49,8 +52,10 @@ $paragraph-color: #718096; // Assuming this is your paragraph color, adjust as n
         &--label {
           display: block; // Ensure labels are displayed in block
           margin-bottom: 0.5rem;
+          margin-top: 0.5rem;
           font-weight: 500;
           color: $text-color;
+          
         }
       }
     }

@@ -1,13 +1,30 @@
-/* MiddleBar.scss */
 .middle-bar--parent {
-    position: absolute;
-    top: 100px; /* Height of the header */
-    left: 200px; /* Width of the left menu */
-    right: 200px; /* Width of the right menu */
-    height: 70px; /* Adjust height as needed */
-    background-color: #F7F7F6; /* Example background color */
-    border-right: 1px solid #C7DEFF80;
-    box-shadow: 2px 4px 5px 0px #0000000D;
-    font-weight: 500;
-  }
+  position: absolute;
+  top: 89.3px; /* Height of the header */
+  left: 230px; /* Width of the left menu */
+  right: 230px; /* Width of the right menu */
+  height: 70px; /* Adjust height as needed */
+  background-color: #F7F7F6; /* Example background color */
+  border-right: 1px solid #C7DEFF80;
+  box-shadow: 2px 4px 5px 0px #0000000D;
+  font-weight: 500;
   
+  .middle-bar--child {
+    display: flex;
+    align-items: center;
+    padding: 0 50px; /* Adjust padding as needed */
+    height: 100%;
+  }
+
+  .middle-bar--child1 {
+    margin-right: 35vw; /* Adjust margin as needed */
+    
+    &:last-child {
+      margin-right: 0; /* Remove margin for the last child */
+    }
+  }
+
+  .settings {
+    font-weight: 400; /* Adjust font weight for Settings */
+  }
+}

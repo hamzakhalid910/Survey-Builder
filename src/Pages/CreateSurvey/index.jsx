@@ -4,7 +4,7 @@ import Form from "../../Components/Form/index";
 function CreateSurvey() {
   return (
     <>
-      <Form></Form>
+      <Form/>
     </>
   );
 }
