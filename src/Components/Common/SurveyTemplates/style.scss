@@ -1,0 +1,74 @@
+// SurveyTemplates.scss
+.survey-templates {
+  width: 100%;
+  padding-left: 8%;
+  padding-right: 8%;
+
+  .survey-heading {
+    width: 100%;
+  }
+
+  .survey-title {
+    font-weight: bold;
+    display: block;
+    font-family: "Lato", sans-serif;
+  }
+
+  .survey-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 3%;
+  }
+
+  .survey-item {
+    background-color: #fff;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 22.7%;
+  }
+
+  .survey-thumbnail {
+    width: 100%;
+    height: 50%;
+  }
+
+  .survey-details {
+    padding: 1rem;
+  }
+
+  .survey-title {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  .survey-completion-time {
+    color: #828282;
+    font-size: 1rem;
+  }
+
+  .label {
+    font-weight: normal;
+  }
+
+  .value {
+    font-weight: bold;
+  }
+
+  .survey-button {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+  }
+
+  .use-template-button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 0.3rem;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}

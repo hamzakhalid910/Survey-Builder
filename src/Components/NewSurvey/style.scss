@@ -1,0 +1,23 @@
+.new-survey-container {
+    display: flex;
+    padding: 0 8%;
+    height: 15%;
+  }
+  
+  .survey-title {
+    width: 80%;
+    padding-top: 3%;
+    padding-bottom: 2%;
+    padding-left: 0.5%;
+    font-weight: 600;
+  }
+  
+  .button-container {
+    display: flex;
+    width: 20%;
+    flex-grow: 1;
+    padding-right: 0.5%;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  

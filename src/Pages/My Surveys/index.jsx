@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "../Components/Common/Header/index";
+import Header from "../../Components/Common/Header/index";
 
 function MySurveys() {
   return (

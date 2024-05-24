@@ -1,0 +1,61 @@
+.survey-container {
+  display: flex;
+  // justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  // Adjusted for equal spacing
+}
+
+.survey-option {
+  flex: 1;
+  background-color: rgba(211, 239, 248, 0.5);
+  border: 1px solid #ccc;
+  border-radius: 0.375rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; // Ensures equal height
+  margin-left: 5vw; // Ensures equal margin between items
+}
+
+.survey-option-scratch {
+  background-color: rgba(211, 239, 248, 0.5); // #D3EFF880
+  margin-left: 8%;
+}
+
+.survey-option-template {
+  background-color: rgba(234, 233, 251, 0.5); // #EAE9FB80
+}
+
+.survey-option-ai {
+  background-color: rgba(244, 225, 254, 0.5); // #F4E1FE80
+  margin-right: 8vw;
+}
+
+.survey-button {
+  display: block;
+  text-align: start;
+  width: 100%;
+  padding: 2rem;
+}
+
+.survey-header {
+  display: flex;
+  align-items: center; // Vertically centers the items
+}
+
+.survey-title {
+  font-weight: 600;
+  width: 70%;
+}
+
+.survey-icon {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.survey-description {
+  color: #828282;
+  padding-top: 1rem;
+}

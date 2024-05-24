@@ -1,0 +1,30 @@
+.search-templates-container {
+  border: solid;
+  width: 90%;
+  padding-left: 2%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.search-input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.search-icon {
+  position: absolute;
+  left: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.search-input {
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 0.375rem;
+  width: 100%;
+  padding-left: 2rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}

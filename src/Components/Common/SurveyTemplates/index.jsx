@@ -1,4 +1,6 @@
+// SurveyTemplates.js
 import React from "react";
+import "./style.scss";
 
 function SurveyTemplates() {
   const Surveys = [
@@ -27,42 +29,29 @@ function SurveyTemplates() {
       completionTime: "7 MINS",
     },
   ];
-
   return (
     <>
-      <div className="w-full">
-        <div className="w-full ">
-          <h1 className="font-semibold block font-lato">
-            Customer Satisfaction Surveys
-          </h1>
+      <div className="survey-templates">
+        <div className="survey-heading">
+          <h1 className="survey-title">Customer Satisfaction Surveys</h1>
         </div>
-
-        {/* Survey Mapping */}
-        <div className="flex flex-wrap justify-start space-x-[3%] my-[2%]">
+        <div className="survey-list">
           {Surveys.map((survey, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-lg overflow-hidden shadow-lg w-[22.7%] "
-            >
+            <div key={index} className="survey-item">
               <img
-                className="w-full h-[60%]"
+                className="survey-thumbnail"
                 src={survey.SurveyThumbnail}
                 alt={survey.SurveyTitle}
               />
-
-              <div className="px-4 py-4">
-                <div className="font-semibold mb-2">{survey.SurveyTitle}</div>
-
-                <p className="text-gray-700 text-base">
-                  <span className="font-[#828282]">Est. Completion time: </span>
-                  <span className="font-semibold">{survey.completionTime}</span>
+              <div className="survey-details">
+                <div className="survey-title">{survey.SurveyTitle}</div>
+                <p className="survey-completion-time">
+                  <span className="label">Est. Completion time: </span>
+                  <span className="value">{survey.completionTime}</span>
                 </p>
               </div>
-
-              <div className="flex content-center justify-center p-2">
-                <button className="bg-[#3498DB] px-4 py-2 rounded-md text-white font-semibold">
-                  Use Template
-                </button>
+              <div className="survey-button">
+                <button className="use-template-button">Use Template</button>
               </div>
             </div>
           ))}
