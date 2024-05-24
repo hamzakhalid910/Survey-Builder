@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { ListIconSVG } from "../Icons Svg Components/ListIconSVG";
-import { GridIconSVG } from "../Icons Svg Components/GridIconSVG";
+import ListIconSVG from "../Icons Svg Components/ListIconSVG";
+import GridIconSVG from "../Icons Svg Components/GridIconSVG";
 
 function ListGridView() {
   const [isActive, setIsActive] = useState(null);

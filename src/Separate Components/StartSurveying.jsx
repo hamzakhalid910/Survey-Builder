@@ -1,7 +1,7 @@
 import React from "react";
-import { StartFromScratch } from "../Svg Components/StartFromScratch";
-import { QuickTemplateSVG } from "../Svg Components/QuickTemplateSVG";
-import { BuildWithAiSVG } from "../Svg Components/BuildWithAiSVG";
+import StartFromScratch from "../Svg Components/StartFromScratch";
+import QuickTemplateSVG from "../Svg Components/QuickTemplateSVG";
+import BuildWithAiSVG from "../Svg Components/BuildWithAiSVG";
 import { useNavigate } from "react-router-dom";
 
 function StartSurveying() {
@@ -18,9 +18,7 @@ function StartSurveying() {
           }}
         >
           <div className="flex">
-            <h1 className="font-semibold w-[70%] ">
-              Start from scratch
-            </h1>
+            <h1 className="font-semibold w-[70%] ">Start from scratch</h1>
             <div className="items-end justify-end flex w-[30%]">
               <StartFromScratch />
             </div>
@@ -35,9 +33,7 @@ function StartSurveying() {
       <div className="flex w-[33%] bg-[#EAE9FB80] border rounded-md content-start">
         <button className="block text-start p-8">
           <div className="flex">
-            <h1 className="font-semibold w-[70%]">
-              Use a quick template
-            </h1>
+            <h1 className="font-semibold w-[70%]">Use a quick template</h1>
             <div className="w-[30%]  items-end justify-end flex">
               <QuickTemplateSVG />
             </div>

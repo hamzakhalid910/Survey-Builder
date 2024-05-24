@@ -1,11 +1,10 @@
 import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import { Provider } from "react-redux";
-// import store from "./redux/store";
-// import "./App.css";
+import { Provider } from "react-redux";
+import store from "./redux/store";
 import SignUp from "./Pages/SignUp";
 import SignIn from "./Pages/SignIn";
-import { User } from "./Separate Components/User";
+import { User } from "./Components/Common/User/index";
 import Header from "./Components/Common/Header/index";
 import Dashboard from "./Pages/Dashboard";
 import CreateSurvey from "./Pages/CreateSurvey";

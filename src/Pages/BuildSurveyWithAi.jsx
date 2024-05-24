@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 import React from "react";
 
-const BuildSurveyWithAi = () => {
+function BuildSurveyWithAi() {
   const objects = [
     {
       title: "Customer Satisfaction",
@@ -121,6 +121,6 @@ const BuildSurveyWithAi = () => {
       </div>
     </>
   );
-};
+}
 
 export default BuildSurveyWithAi;

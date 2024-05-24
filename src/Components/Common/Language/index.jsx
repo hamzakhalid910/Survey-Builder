@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { DropDownSVG } from "../Svg Components/DropDownSVG";
+import DropDownSVG from "../../../Svg Components/DropDownSVG";
+import "./style.scss";
 
 const languages = [
   {
     language: "English",
     flag: "https://cdn.britannica.com/79/4479-050-6EF87027/flag-Stars-and-Stripes-May-1-1795.jpg",
-  }, // USA flag
+  },
   {
     language: "Australia",
     flag: "https://upload.wikimedia.org/wikipedia/commons/b/b9/Flag_of_Australia.svg",
@@ -26,7 +27,6 @@ const languages = [
     language: "Italian",
     flag: "https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg",
   },
-
   {
     language: "Russian",
     flag: "https://upload.wikimedia.org/wikipedia/en/f/f3/Flag_of_Russia.svg",
@@ -37,7 +37,7 @@ const languages = [
   },
 ];
 
-export function Language() {
+function Language() {
   const [selectedLanguage, setSelectedLangauge] = useState("En");
   const [selectedFlag, setSelectedFlag] = useState(
     "https://cdn.britannica.com/79/4479-050-6EF87027/flag-Stars-and-Stripes-May-1-1795.jpg"
@@ -59,48 +59,44 @@ export function Language() {
 
   return (
     <>
-      <div className="flex ml-[8%] w-full items-center justify-center">
-        <div className="flex w-[40%] ">
-          {/* Flag Div */}
-          <div className=" w-[50%] flex justify-center items-center">
-            <img className="w-5 h-5 rounded-full" src={selectedFlag} alt="" />
+      <div className="language-container-parent">
+        <div className="language-selected-child2">
+          <div className="flag-container">
+            <img className="flag" src={selectedFlag} alt="" />
           </div>
-
-          <h1 className=" flex  w-[50%] font-semibold pl-2">
-            {selectedLanguage}
-          </h1>
+          <h1 className="selected-language">{selectedLanguage}</h1>
         </div>
 
-        <div className="flex mt-1 w-[60%]">
-          <button className="ml-1" onClick={toggleDropDown}>
+        <div className="dropdown-toggle">
+          <button className="dropdown-button" onClick={toggleDropDown}>
             <DropDownSVG />
           </button>
         </div>
         {showDropDown && (
-          <div className="absolute mt-[17%] ml-[-0.4%] bg-white w-[10%] px-4 py-4 rounded-sm shadow-lg z-10">
+          <div className="dropdown-menu">
             {languages.map((languageObj, index) => (
               <button
-                className="flex items-center text-sm border mb-1 text-[#828282] w-[100%]" // Use flexbox to align flag and language
+                className="dropdown-item"
                 key={index}
-                value={languageObj.language} // Set the value to the language name
+                value={languageObj.language}
                 onClick={() =>
                   handleLanguageChange(languageObj.language, languageObj.flag)
-                } // Pass the language name to the handler
+                }
               >
                 <img
-                  className="border h-5 w-5 rounded-full"
+                  className="dropdown-flag"
                   src={languageObj.flag}
                   alt={languageObj.language}
-                />{" "}
+                />
                 <span
                   className={
                     selectedLanguage === languageObj.language.slice(0, 2)
-                      ? "text-primary pl-2"
-                      : "pl-2"
+                      ? "dropdown-language active"
+                      : "dropdown-language"
                   }
                 >
                   {languageObj.language}
-                </span>{" "}
+                </span>
               </button>
             ))}
           </div>
@@ -109,3 +105,5 @@ export function Language() {
     </>
   );
 }
+
+export default Language;

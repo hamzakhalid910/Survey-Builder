@@ -1,9 +1,9 @@
 import React from "react";
 
-export function StartFromScratch() {
+function StartFromScratch() {
   return (
     <svg
-    //   className="content-right"
+      //   className="content-right"
       width="48"
       height="48"
       viewBox="0 0 48 48"
@@ -123,3 +123,5 @@ export function StartFromScratch() {
     </svg>
   );
 }
+
+export default StartFromScratch;

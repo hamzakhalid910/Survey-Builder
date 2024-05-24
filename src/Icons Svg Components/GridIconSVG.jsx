@@ -1,6 +1,6 @@
 import React from "react";
 
-export function GridIconSVG() {
+function GridIconSVG() {
   return (
     <svg
       width="24"
@@ -16,3 +16,5 @@ export function GridIconSVG() {
     </svg>
   );
 }
+
+export default GridIconSVG;

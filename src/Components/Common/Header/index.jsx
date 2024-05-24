@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-
 // import { DashboardLogoSVG } from ".../Svg Components/DashboardLogoSVG";
-import { User } from "../Separate Components/User";
-import { Language } from "../Separate Components/Language";
-import { NotificationSVG } from "../Svg Components/NotificationsSVG";
+import User from "../User/index";
+import Language from "../Language/index";
 import { useNavigate } from "react-router-dom";
+import "./style.scss";
+import NotificationSVG from "../../../Svg Components/NotificationsSVG";
 
 function Header() {
   const [activeLink, setActiveLink] = useState(location.pathname);
@@ -16,23 +16,17 @@ function Header() {
   };
 
   return (
-    <div className="flex w-full h-full bg-[#E9F4FE]">
-      <div className="ml-[8%] w-[10%] h-[20%] z-10 p-2">
+    <div className="header-parent">
+      <div className="logo-container-child1">
         {/* <DashboardLogoSVG /> */}
-        <img
-          className="px-2 pb-3"
-          src="src\Images\Group 7.png"
-          alt="Builder Logo"
-        />
+        <img src="src\Images\Group 7.png" alt="Builder Logo" />
       </div>
-      <div className="flex w-[32%] ml-[4%] space-x-4 px-[4%] items-center">
+
+
+      <div className="navigation-child2">
         {/* Dashboard Button */}
         <button
-          className={` ${
-            activeLink === "/dashboard"
-              ? "text-[#3498DB] font-semibold underline"
-              : "text-[#828282]"
-          }`}
+          className={` ${activeLink === "/dashboard" ? "active" : "inactive"}`}
           onClick={() => handleSetActiveLink("/dashboard")}
         >
           Dashboard
@@ -40,11 +34,7 @@ function Header() {
 
         {/* MySurveys Button */}
         <button
-          className={` ${
-            activeLink === "/mysurveys"
-              ? "text-[#3498DB] font-semibold underline"
-              : "text-[#828282]"
-          }`}
+          className={` ${activeLink === "/mysurveys" ? "active" : "inactive"}`}
           onClick={() => handleSetActiveLink("/mysurveys")}
         >
           My Surveys
@@ -52,14 +42,12 @@ function Header() {
       </div>
 
       {/* Upgrade Plan Button */}
-      <div className="flex w-[17%] justify-center items-center">
-        <button className="text-[#3498DB] border border-[#3498DB]  rounded-lg p-2 font-semibold">
-          Upgrade Plan
-        </button>
+      <div className="upgrade-plan-child3">
+        <button>Upgrade Plan</button>
       </div>
 
       {/* Notifications */}
-      <div className="flex w-[3%] items-center justify-center">
+      <div className="notifications-child4">
         <button
           onClick={() => {
             console.log("Notifications");
@@ -70,12 +58,12 @@ function Header() {
       </div>
 
       {/* Language */}
-      <div className="flex w-[10%] items-center">
+      <div className="language-child5">
         <Language />
       </div>
 
       {/* User */}
-      <div className="flex w-[12%] mr-[8%] items-center justify-end px-1 ">
+      <div className="user-child6">
         <User />
       </div>
     </div>

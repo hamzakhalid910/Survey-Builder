@@ -1,6 +1,6 @@
 import React from "react";
 
-export function SignInSVG() {
+function SignInSVG() {
   return (
     <svg
       width="719"
@@ -555,3 +555,5 @@ export function SignInSVG() {
     </svg>
   );
 }
+
+export default SignInSVG;

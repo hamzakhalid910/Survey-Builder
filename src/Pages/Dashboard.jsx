@@ -5,25 +5,14 @@ import { SearchTemplates } from "../Separate Components/SearchTemplates";
 import ListGridView from "../Separate Components/ListGridView";
 import SurveyTemplates from "../Components/SurveyTemplates";
 import { NewSurveyButton } from "../Components/Common/NewSurveyButton";
+import NewSurvey from "../Components/NewSurvey";
 
 function Dashboard() {
   return (
     <>
-      <div className="h-screen">
-        <div className="h-[13%]">
-          <Header />
-        </div>
-
-        {/* New Survey Div */}
-        <div className="flex  mx-[8%] h-[15%] ">
-          <h1 className="w-[80%]  pt-[3%] pb-[2%] font-semibold">
-            How would you best describe your surveying and forms expertise?
-          </h1>
-
-          <div className="flex w-[20%] flex-grow items-center justify-end">
-            <NewSurveyButton />
-          </div>
-        </div>
+      <div>
+        <Header />
+        <NewSurvey />
 
         {/* Start Surveying */}
         <div className="mx-[8%] h-[27%]">

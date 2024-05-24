@@ -1,11 +1,11 @@
 import React from "react";
 import { useState } from "react";
-import { SignInSVG } from "../Svg Components/SignInSVG";
-import { SurveyBuilderSVG } from "../Svg Components/SurveyBuilderSVG";
-import { HelloThereSVG } from "../Svg Components/HelloThereSVG";
-import { UserIconSVG } from "../Icons Svg Components/UserIcon";
-import { EmailIcon } from "../Icons Svg Components/EmailIcon";
-import { PasswordIcon } from "../Icons Svg Components/PasswordIcon";
+import SignInSVG from "../Svg Components/SignInSVG";
+import SurveyBuilderSVG from "../Svg Components/SurveyBuilderSVG";
+import HelloThereSVG from "../Svg Components/HelloThereSVG";
+import UserIconSVG from "../Icons Svg Components/UserIcon";
+import EmailIcon from "../Icons Svg Components/EmailIcon";
+import PasswordIcon from "../Icons Svg Components/PasswordIcon";
 
 function SignIn() {
   const [formData, setFormData] = useState({

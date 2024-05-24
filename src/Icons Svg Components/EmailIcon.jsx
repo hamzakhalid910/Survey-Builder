@@ -1,6 +1,6 @@
 import React from "react";
 
-export function EmailIcon() {
+function EmailIcon() {
   return (
     <svg
       width="24"
@@ -26,3 +26,5 @@ export function EmailIcon() {
     </svg>
   );
 }
+
+export default EmailIcon;

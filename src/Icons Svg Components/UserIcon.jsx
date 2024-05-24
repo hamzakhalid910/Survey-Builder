@@ -1,6 +1,6 @@
 import React from "react";
 
-export function UserIconSVG() {
+function UserIconSVG() {
   return (
     <svg
       width="24"
@@ -26,3 +26,5 @@ export function UserIconSVG() {
     </svg>
   );
 }
+
+export default UserIconSVG;

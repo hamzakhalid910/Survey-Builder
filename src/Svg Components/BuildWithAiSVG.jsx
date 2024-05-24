@@ -1,6 +1,6 @@
 import React from "react";
 
-export function BuildWithAiSVG() {
+function BuildWithAiSVG() {
   return (
     <svg
       width="48"
@@ -79,3 +79,5 @@ export function BuildWithAiSVG() {
     </svg>
   );
 }
+
+export default BuildWithAiSVG;

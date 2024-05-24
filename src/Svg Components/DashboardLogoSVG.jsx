@@ -1,6 +1,6 @@
 import React from "react";
 
-export function DashboardLogoSVG() {
+function DashboardLogoSVG() {
   return (
     <svg
       width="105"
@@ -37,3 +37,5 @@ export function DashboardLogoSVG() {
     </svg>
   );
 }
+
+export default DashboardLogoSVG;

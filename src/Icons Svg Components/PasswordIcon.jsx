@@ -1,6 +1,6 @@
 import React from "react";
 
-export function PasswordIcon() {
+function PasswordIcon() {
   return (
     <svg
       width="24"
@@ -33,3 +33,5 @@ export function PasswordIcon() {
     </svg>
   );
 }
+
+export default PasswordIcon;

@@ -1,0 +1,89 @@
+.header-parent {
+  display: flex;
+  width: 100vw;
+  height: 12vh;
+  background-color: #e9f4fe;
+  
+
+  .logo-container-child1 {
+    margin-left: 8%;
+    overflow: hidden;
+    height: 12vh;
+
+    border: 1px solid;
+    width: 20vw;
+    border: solid;
+
+    img {
+      padding-left: 2rem;
+      padding-bottom: 30rem;
+      border: 1 solid;
+      // height: 12vh;
+    }
+  }
+
+  .navigation-child2 {
+    display: flex;
+    width: 30%vw;
+    align-items: center;
+    padding-left: 2%;
+
+    button {
+      margin-left: 6%;
+      &.active {
+        color: #3498db;
+        font-weight: 600;
+        text-decoration: underline;
+      }
+
+      &.inactive {
+        color: #828282;
+      }
+    }
+  }
+
+  .upgrade-plan-child3 {
+    display: flex;
+    width: 20vw;
+    justify-content: center;
+    align-items: center;
+
+    button {
+      color: #3498db;
+      border: 1px solid #3498db;
+      border-radius: 0.5rem;
+      padding: 0.5rem;
+      font-weight: 600;
+    }
+  }
+
+  .notifications-child4 {
+    display: flex;
+    width: 5vw;
+    align-items: center;
+    justify-content: center;
+
+    button {
+      // Add any styles for the notification button if needed
+    }
+  }
+
+  .language-child5 {
+    display: flex;
+    border: solid;
+    width: 10vw;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .user-child6 {
+    display: flex;
+    border: solid;
+
+    width: 15vw;
+    margin-right: 8vw;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 1.0rem;
+  }
+}

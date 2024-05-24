@@ -1,6 +1,6 @@
 import React from "react";
 
-export function ListIconSVG() {
+function ListIconSVG() {
   return (
     <svg
       width="24"
@@ -16,3 +16,5 @@ export function ListIconSVG() {
     </svg>
   );
 }
+
+export default ListIconSVG;

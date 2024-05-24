@@ -1,11 +1,11 @@
 import React from "react";
 import { useState } from "react";
-import { SignUpSVG } from "../Svg Components/SignUpSVG";
-import { SurveyBuilderSVG } from "../Svg Components/SurveyBuilderSVG";
-import { HelloThereSVG } from "../Svg Components/HelloThereSVG";
-import { UserIconSVG } from "../Icons Svg Components/UserIcon";
-import { EmailIcon } from "../Icons Svg Components/EmailIcon";
-import { PasswordIcon } from "../Icons Svg Components/PasswordIcon";
+import SignUpSVG from "../Svg Components/SignUpSVG";
+import SurveyBuilderSVG from "../Svg Components/SurveyBuilderSVG";
+import UserIconSVG from "../Icons Svg Components/UserIcon";
+import EmailIcon from "../Icons Svg Components/EmailIcon";
+import PasswordIcon from "../Icons Svg Components/PasswordIcon";
+import HelloThereSVG from "../Svg Components/HelloThereSVG";
 
 function SignUp() {
   const [formData, setFormData] = useState({
@@ -44,7 +44,7 @@ function SignUp() {
             <h1 className="flex mt-4">
               Enter you info to Sign Up!{" "}
               <span>
-                <HelloThereSVG />
+                <HelloThereSVG />{" "}
               </span>
             </h1>
 

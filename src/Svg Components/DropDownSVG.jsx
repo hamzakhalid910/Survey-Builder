@@ -1,6 +1,6 @@
 import React from "react";
 
-export function DropDownSVG() {
+function DropDownSVG() {
   return (
     <svg
       width="16"
@@ -16,3 +16,5 @@ export function DropDownSVG() {
     </svg>
   );
 }
+
+export default DropDownSVG;

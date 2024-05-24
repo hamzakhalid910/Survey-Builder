@@ -1,6 +1,6 @@
 import React from "react";
 
-export function QuickTemplateSVG() {
+function QuickTemplateSVG() {
   return (
     <svg
       width="38"
@@ -48,3 +48,5 @@ export function QuickTemplateSVG() {
     </svg>
   );
 }
+
+export default QuickTemplateSVG;

@@ -1,6 +1,6 @@
 import React from "react";
 
-export function HelloThereSVG() {
+function HelloThereSVG() {
   return (
     <svg
       width="31"
@@ -78,3 +78,5 @@ export function HelloThereSVG() {
     </svg>
   );
 }
+
+export default HelloThereSVG;

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import DropDown from "../../Icons Svg Components/DropDownIcon";
 import Search from "../../Icons Svg Components/SearchIconPlain";
-import "./CustomDropdown.scss"; // Import the SCSS file
+import "./style.scss"; // Import the SCSS file
 
 const CustomDropdown = ({ options, value, onChange, placeholder }) => {
   const [isOpen, setIsOpen] = useState(false);

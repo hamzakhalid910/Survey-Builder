@@ -1,6 +1,6 @@
 import React from "react";
 
-export function SignUpSVG() {
+function SignUpSVG() {
   return (
     <svg
       className="w-[100%] pb-10 h-screen"
@@ -763,3 +763,5 @@ export function SignUpSVG() {
     </svg>
   );
 }
+
+export default SignUpSVG;

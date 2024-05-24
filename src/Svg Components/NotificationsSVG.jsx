@@ -1,6 +1,6 @@
 import React from "react";
 
-export function NotificationSVG() {
+function NotificationSVG() {
   return (
     <svg
       width="30"
@@ -42,3 +42,5 @@ export function NotificationSVG() {
     </svg>
   );
 }
+
+export default NotificationSVG;
