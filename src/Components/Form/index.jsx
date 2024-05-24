@@ -35,35 +35,7 @@ const languages = [
   "German",
   "Japanese",
 ];
-  "Web Development",
-  "Mobile App Development",
-  "Data Science",
-  "Machine Learning",
-  "Cyber Security",
-  "UI/UX Design",
-  "Cloud Computing",
-  "Game Development",
-  "Blockchain Development",
-  "Internet of Things (IoT)",
-  "Augmented Reality (AR) Development",
-  "Virtual Reality (VR) Development",
-  "DevOps",
-  "Artificial Intelligence (AI)",
-  "Big Data",
-  "E-commerce",
-  "Healthcare IT",
-  "Finance Technology (Fintech)",
-  "EdTech",
-];
 
-const languages = [
-  "English",
-  "Spanish",
-  "Mandarin",
-  "French",
-  "German",
-  "Japanese",
-];
 
 const Form = () => {
   const [surveyTitle, setSurveyTitle] = useState("");

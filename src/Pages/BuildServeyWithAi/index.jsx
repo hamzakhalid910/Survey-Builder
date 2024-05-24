@@ -5,7 +5,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import bulbSVG from "../../Icons Svg Components/bulbSVG";
 import React from "react";
-import Header from "../../Components/Header";
+import Header from "../../Components/Common/Header";
+
 
 function BuildSurveyWithAi() {
   const objects = [
