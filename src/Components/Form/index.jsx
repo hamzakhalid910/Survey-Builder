@@ -6,35 +6,35 @@ import Header from "../Header";
 import "./style.scss"; // Import the SCSS file
 
 const projectTypes = [
-    "Web Development",
-    "Mobile App Development",
-    "Data Science",
-    "Machine Learning",
-    "Cyber Security",
-    "UI/UX Design",
-    "Cloud Computing",
-    "Game Development",
-    "Blockchain Development",
-    "Internet of Things (IoT)",
-    "Augmented Reality (AR) Development",
-    "Virtual Reality (VR) Development",
-    "DevOps",
-    "Artificial Intelligence (AI)",
-    "Big Data",
-    "E-commerce",
-    "Healthcare IT",
-    "Finance Technology (Fintech)",
-    "EdTech",
-  ];
-  
-  const languages = [
-    "English",
-    "Spanish",
-    "Mandarin",
-    "French",
-    "German",
-    "Japanese",
-  ];
+  "Web Development",
+  "Mobile App Development",
+  "Data Science",
+  "Machine Learning",
+  "Cyber Security",
+  "UI/UX Design",
+  "Cloud Computing",
+  "Game Development",
+  "Blockchain Development",
+  "Internet of Things (IoT)",
+  "Augmented Reality (AR) Development",
+  "Virtual Reality (VR) Development",
+  "DevOps",
+  "Artificial Intelligence (AI)",
+  "Big Data",
+  "E-commerce",
+  "Healthcare IT",
+  "Finance Technology (Fintech)",
+  "EdTech",
+];
+
+const languages = [
+  "English",
+  "Spanish",
+  "Mandarin",
+  "French",
+  "German",
+  "Japanese",
+];
 
 const Form = () => {
   const [surveyTitle, setSurveyTitle] = useState("");
@@ -54,18 +54,18 @@ const Form = () => {
   };
 
   return (
-    <div className="Form">
+    <div className="Form--parent">
       {/* Static header */}
       <Header />
 
       {/* Form */}
-      <div className="form-container">
+      <div className="Form--child">
         <form onSubmit={handleSubmit}>
-          <h1>Create New Survey</h1>
-          <p>Enter the details of your project.</p>
+          <h1 className="Form--child1--title">Create New Survey</h1>
+          <p className="Form--child1--description">Enter the details of your project.</p>
 
           <FormInput
-            className="form-input"
+            className="Form--child1--input"
             label="Survey Title"
             type="text"
             placeholder="Enter survey name"
@@ -73,8 +73,8 @@ const Form = () => {
             onChange={(e) => setSurveyTitle(e.target.value)}
           />
 
-          <div className="mb-4">
-            <label htmlFor="projectType">Select or search your project type</label>
+          <div className="Form--child1--dropdown">
+            <label className="Form--child1--label" htmlFor="projectType">Select or search your project type</label>
             <CustomDropdown
               className="custom-dropdown"
               options={projectTypes}
@@ -84,8 +84,8 @@ const Form = () => {
             />
           </div>
 
-          <div className="mb-4">
-            <label htmlFor="language">Select language</label>
+          <div className="Form--child1--dropdown">
+            <label className="Form--child1--label" htmlFor="language">Select language</label>
             <CustomDropdown
               className="custom-dropdown"
               options={languages}
@@ -95,7 +95,7 @@ const Form = () => {
             />
           </div>
 
-          <SubmitButton className="submit-button" onSubmit={handleSubmit} />
+          <SubmitButton className="Form--child1--button" onSubmit={handleSubmit} />
         </form>
       </div>
     </div>

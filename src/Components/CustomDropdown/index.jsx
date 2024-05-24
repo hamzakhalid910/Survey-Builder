@@ -1,16 +1,12 @@
 import React, { useState, useEffect } from "react";
 import DropDown from "../../Icons Svg Components/DropDownIcon";
 import Search from "../../Icons Svg Components/SearchIconPlain";
-import "./CustomDropdown.scss"; // Import the SCSS file
+import "./style.scss"; // Import the SCSS file
 
 const CustomDropdown = ({ options, value, onChange, placeholder }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState(value || "");
   const [hoveredOption, setHoveredOption] = useState(null);
-
-  const filteredOptions = options.filter((option) =>
-    option.toLowerCase().includes(searchTerm.toLowerCase())
-  );
 
   useEffect(() => {
     setSearchTerm(value);
@@ -37,26 +33,23 @@ const CustomDropdown = ({ options, value, onChange, placeholder }) => {
         value={searchTerm}
         onChange={handleInputChange}
         placeholder={placeholder}
+        className="custom-dropdown--input"
       />
-      <div className="absolute inset-y-0 left-2 flex items-center pr-2">
+      <div className="custom-dropdown--search-icon">
         <Search />
       </div>
-      <div
-        className="absolute inset-y-0 right-0 flex items-center pr-6 cursor-pointer"
-        onClick={handleArrowClick}
-      >
+      <div className="custom-dropdown--arrow-icon" onClick={handleArrowClick}>
         <DropDown isOpen={isOpen} />
       </div>
+
       {isOpen && (
-        <div className="absolute z-10 w-full max-h-60 overflow-y-auto bg-white border rounded-md mt-1">
-          {filteredOptions.map((option) => (
+        <div className="custom-dropdown--options">
+          {options.map((option) => (
             <div
               key={option}
               onClick={() => handleOptionClick(option)}
-              className={`px-4 py-2 cursor-pointer ${
-                hoveredOption === option
-                  ? "bg-[#E0E0E0] text-primary"
-                  : "hover:bg-[#E0E0E0] text-paragraph"
+              className={`custom-dropdown--option ${
+                hoveredOption === option ? "hovered" : ""
               }`}
               onMouseEnter={() => setHoveredOption(option)}
               onMouseLeave={() => setHoveredOption(null)}

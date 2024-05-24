@@ -1,0 +1,12 @@
+/* RightMenu.scss */
+.right-menu {
+    position: absolute;
+    top: 100px; /* Height of the header */
+    right: 0;
+    height: calc(100% - 100px); /* Full height minus height of the header */
+    width: 200px; /* Adjust width as needed */
+    background-color: #F7F7F6; /* Example background color */
+    border-left: 1px solid #C7DEFF80;
+    box-shadow: 2px 4px 5px 0px #0000000D;
+  }
+  
