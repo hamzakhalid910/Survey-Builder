@@ -1,86 +1,60 @@
+// Define a mixin for common properties
+@mixin common-styles($padding, $border, $border-radius, $font-weight, $color, $background-color, $box-shadow) {
+  padding: $padding;
+  border: $border;
+  border-radius: $border-radius;
+  font-weight: $font-weight;
+  color: $color;
+  background-color: $background-color;
+  box-shadow: $box-shadow;
+}
+
 .custom-dropdown--parent {
   position: relative;
+  $primary-color: #3498DB;
+  font-weight: 400;
 
   input {
-    width: 100%;
-    padding: 0.5rem 2.5rem 0.5rem 2rem;
-    border: 1.5px solid #CEE1FC;
-    border-radius: 0.5rem;
+    @include common-styles(0.5rem 2.5rem 0.5rem 2rem, 1.5px solid #CEE1FC, 0.5rem, 400, #000, #fff, none);
+    width: 90%;
     outline: none;
-    transition: border-color 0.3s;
+    position: relative;
 
-    &:focus {
-      border-color: #3182ce; // Adjust as needed
+    & ~ .custom-dropdown--search-icon {
+      position: absolute;
+      top: 50%;
+      left: 0.5rem;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+
+    & ~ .custom-dropdown--arrow-icon {
+      position: absolute;
+      top: 50%;
+      right: 12%;
+      transform: translateY(-50%);
+      cursor: pointer;
     }
   }
 
-  .absolute {
-    &.inset-y-0 {
-      top: 0;
-      bottom: 0;
-    }
-
-    &.left-2 {
-      left: 0.5rem; // Adjust as needed
-    }
-
-    &.right-0 {
-      right: 0;
-    }
-  }
-
-  .pr-2 {
-    padding-right: 0.5rem; // Adjust as needed
-  }
-
-  .pr-6 {
-    padding-right: 1.5rem; // Adjust as needed
-  }
-
-  .cursor-pointer {
-    cursor: pointer;
-  }
-
-  .max-h-60 {
-    max-height: 15rem; // Adjust as needed
-  }
-
-  .overflow-y-auto {
+  .custom-dropdown--options {
+    @include common-styles(0, 1px solid #CEE1FC, 0 0 0.5rem 0.5rem, 400, #828282, #fff, 0 0.5rem 1rem rgba(0, 0, 0, 0.3));
+    position: absolute;
+    top: calc(100%);
+    left: 0;
+    width: 90%;
+    z-index: 10;
+    max-height: 15rem;
     overflow-y: auto;
-  }
 
-  .bg-white {
-    background-color: #fff;
-  }
+    .custom-dropdown--option {
+      padding: 0.5rem;
+      cursor: pointer;
 
-  .border {
-    border: 1px solid #E0E0E0; // Adjust as needed
-  }
-
-  .rounded-md {
-    border-radius: 0.375rem; // Equivalent to Tailwind's rounded-md
-  }
-
-  .px-4 {
-    padding-left: 1rem; // Adjust as needed
-    padding-right: 1rem; // Adjust as needed
-  }
-
-  .py-2 {
-    padding-top: 0.5rem; // Adjust as needed
-    padding-bottom: 0.5rem; // Adjust as needed
-  }
-
-  .cursor-pointer {
-    cursor: pointer;
-  }
-
- 
-  .text-primary {
-    color: #3182ce; // Adjust as needed
-  }
-
-  .text-paragraph {
-    color: #4a5568; // Adjust as needed
+      &:hover {
+        background-color: #E0E0E0;
+        color: $primary-color;
+      }
+    }
   }
 }

@@ -1,16 +1,10 @@
 import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Provider } from "react-redux";
-import store from "./redux/store";
-import SignUp from "./Pages/SignUp";
-import SignIn from "./Pages/SignIn";
-import { User } from "./Components/Common/User/index";
-import Header from "./Components/Common/Header/index";
-import Dashboard from "./Pages/Dashboard";
-import CreateSurvey from "./Pages/CreateSurvey";
-import BuildSurveyWithAi from "./Pages/BuildSurveyWithAi";
-import SurveyDashboard from "./Pages/SurveyDashboard";
-import MySurveys from "./Pages/MySurveys";
+// import { Provider } from "react-redux";
+// import store from "./redux/store";
+// import "./App.css";
+import { SignUp, SignIn, Dashboard, CreateSurvey, BuildSurveyWithAi, SurveyDashboard, MySurveys } from "./Pages";
+// import { Header, User } from "./Components";
 
 function App() {
   return (
@@ -18,8 +12,8 @@ function App() {
       <Routes>
         <Route path="/" element={<SignUp />} />
         <Route path="/signIn" element={<SignIn />} />
-        <Route path="/user" element={<User />} />
-        <Route path="/header" element={<Header />} />
+        {/* <Route path="/user" element={<User />} /> */}
+        {/* <Route path="/header" element={<Header />} /> */}
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/mysurveys" element={<MySurveys />}></Route>
         <Route path="/createsurvey" element={<CreateSurvey />}></Route>

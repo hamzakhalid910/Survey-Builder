@@ -3,38 +3,56 @@ $primary-color: #3182ce; // Assuming this is your primary color, adjust as neede
 $text-color: #4a5568; // Equivalent to Tailwind's text-gray-700
 $paragraph-color: #718096; // Assuming this is your paragraph color, adjust as needed
 
-.Form {
-  min-height: 100vh; // Equivalent to Tailwind's min-h-screen
-  background-color: #fff; // Equivalent to Tailwind's bg-white
+// Define a mixin for common properties
+@mixin common-styles($font-size, $font-weight, $color, $margin-bottom) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  color: $color;
+  margin-bottom: $margin-bottom;
+}
+
+.Form--parent {
+  min-height: 100vh;
+  background-color: #F8FAFC;
   display: flex;
   flex-direction: column;
   align-items: center;
 
- 
-  // Form container
-  .form-container {
+  .Form--child {
     display: flex;
+    flex-direction: column;
     width: 100%;
-    padding: 1rem 4rem; // Equivalent to Tailwind's px-4 sm:px-32
-    margin-top: 5rem; // Equivalent to Tailwind's mt-20
+    padding: 1rem 6rem;
+    margin-top: 5rem;
 
     form {
-      max-width: 60rem; // Equivalent to Tailwind's max-w-xl
+      max-width: 60rem;
 
-      h1 {
-        font-size: 1.5rem; // Equivalent to Tailwind's text-xl
-        font-weight: 500; // Equivalent to Tailwind's font-medium
-        margin-bottom: 1rem; // Equivalent to Tailwind's mb-4
-        color: $primary-color; // Equivalent to Tailwind's text-primary
+      .Form--child1 {
+        &--title {
+          @include common-styles(1.3rem, 500, $primary-color, 1rem);
+        }
+
+        &--description {
+          @include common-styles(0.875rem, 400, $paragraph-color, 1rem);
+        }
+
+        &--input {
+          width: 100%; // Make the input field full width
+        }
+
+        &--dropdown {
+          width: 100%; 
+          font-weight: 500; // Make sure the dropdowns are also full width
+        }
+
+        &--label {
+          display: block; // Ensure labels are displayed in block
+          margin-bottom: 0.5rem;
+          font-weight: 500;
+          color: $text-color;
+        }
       }
-
-      p {
-        font-size: 0.875rem; // Equivalent to Tailwind's text-sm
-        color: $paragraph-color; // Equivalent to Tailwind's text-paragraph
-        margin-bottom: 1rem; // Equivalent to Tailwind's mb-4
-      }
-
-      
     }
   }
 }

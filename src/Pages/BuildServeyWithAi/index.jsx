@@ -1,10 +1,11 @@
-import Header from "../Components/Common/Header/index";
-import BulbSVG from "../Icons Svg Components/bulbSVG";
+
+
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+import bulbSVG from "../../Icons Svg Components/bulbSVG";
 import React from "react";
+import Header from "../../Components/Header";
 
 function BuildSurveyWithAi() {
   const objects = [
@@ -67,7 +68,7 @@ function BuildSurveyWithAi() {
   return (
     <>
       <div>
-        <Header />
+        <Header/>
       </div>
       <div className="bg-[#F2FBFFCC]">
         <div className="flex ">
@@ -82,7 +83,7 @@ function BuildSurveyWithAi() {
           <div></div>
         </div>
         <div className="flex justify-center mt-[3%] ">
-          <BulbSVG />
+            <BulbSVG />
         </div>
         <div>
           <p className="text-center  text-xs mt-[1%]">
