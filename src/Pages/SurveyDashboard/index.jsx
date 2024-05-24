@@ -4,7 +4,7 @@ import React from 'react';
 import LeftMenu from '../../Components/SurveyDashboard/LeftMenu';
 import RightMenu from '../../Components/SurveyDashboard/RightMenu';
 import MiddleBar from '../../Components/SurveyDashboard/MiddleBar';
-import Header from '../../Components/Header';
+import Header from '../../Components/Common/Header';
 
 
 function SurveyDashboard() {
