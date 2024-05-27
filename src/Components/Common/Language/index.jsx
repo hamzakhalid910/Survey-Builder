@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import DropDownSVG from "../../../Svg Components/DropDownSVG";
 import "./style.scss";
+import SvgRenderer from "../../../Svg Components";
 
 const languages = [
   {
@@ -69,7 +70,7 @@ function Language() {
 
         <div className="dropdown-toggle">
           <button className="dropdown-button" onClick={toggleDropDown}>
-            <DropDownSVG />
+            <SvgRenderer type='dropDown'/>
           </button>
         </div>
         {showDropDown && (

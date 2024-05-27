@@ -1,6 +1,7 @@
 import React from "react";
 import SearchIcon from "../../../Icons Svg Components/SearchIcon";
 import "./style.scss";
+import SvgIconRenderer from "../../../Icons Svg Components";
 
 export function SearchTemplates() {
   return (
@@ -8,7 +9,7 @@ export function SearchTemplates() {
       <form action="">
         <div className="search-input-wrapper">
           <div className="search-icon">
-            <SearchIcon />
+            <SvgIconRenderer type="SearchIcon"/>
           </div>
           <input
             className="search-input"
