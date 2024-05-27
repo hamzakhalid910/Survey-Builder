@@ -4,7 +4,7 @@ import User from "../User/index";
 import Language from "../Language/index";
 import { useNavigate } from "react-router-dom";
 import "./style.scss";
-import NotificationSVG from "../../../Svg Components/NotificationsSVG";
+import SvgRenderer from "../../../Svg Components";
 
 function Header() {
   const [activeLink, setActiveLink] = useState(location.pathname);
@@ -52,7 +52,7 @@ function Header() {
             console.log("Notifications");
           }}
         >
-          <NotificationSVG />
+         <SvgRenderer type='Notification'/>
         </button>
       </div>
 

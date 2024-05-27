@@ -1,6 +1,6 @@
 import React from "react";
 
-function BuildWithAiSVG() {
+function BuildWithAiSVG({color}) {
   return (
     <svg
       width="48"
@@ -9,7 +9,7 @@ function BuildWithAiSVG() {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clip-path="url(#clip0_50_224)">
+      <g clipPath="url(#clip0_50_224)">
         <path
           d="M2.39688 25.6023C3.28053 25.6023 3.99688 24.886 3.99688 24.0023C3.99688 23.1187 3.28053 22.4023 2.39688 22.4023C1.51322 22.4023 0.796875 23.1187 0.796875 24.0023C0.796875 24.886 1.51322 25.6023 2.39688 25.6023Z"
           fill="#22EAFF"
@@ -73,7 +73,7 @@ function BuildWithAiSVG() {
       </g>
       <defs>
         <clipPath id="clip0_50_224">
-          <rect width="48" height="48" fill="white" />
+          <rect width="48" height="48" fill={color} />
         </clipPath>
       </defs>
     </svg>

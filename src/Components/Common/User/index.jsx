@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import DropDownSVG from "../../../Svg Components/DropDownSVG";
 import './style.scss';
+import SvgRenderer from "../../../Svg Components";
 
 // User Object
 const userObject = {
@@ -47,7 +48,7 @@ export function User() {
     <div className="user-container">
       <h1 className="user-name">{userObject.user1}</h1>
       <button className="dropdown-button" onClick={toggleDropDown}>
-        <DropDownSVG />
+        <SvgRenderer type='dropDown'/>
       </button>
       {showDropDown && <DropDownMenu />}
     </div>
