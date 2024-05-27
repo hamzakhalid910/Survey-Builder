@@ -1,12 +1,12 @@
 import React from "react";
 
-function NotificationSVG() {
+function NotificationSVG({color}) {
   return (
     <svg
       width="30"
       height="30"
       viewBox="0 0 40 40"
-      fill="none"
+      fill={color}
       xmlns="http://www.w3.org/2000/svg"
     >
       <path

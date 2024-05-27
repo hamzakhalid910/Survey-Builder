@@ -1,5 +1,13 @@
 // Define a mixin for common properties
-@mixin common-styles($padding, $border, $border-radius, $font-weight, $color, $background-color, $box-shadow) {
+@mixin common-styles(
+  $padding: 0, 
+  $border: none, 
+  $border-radius: 0, 
+  $font-weight: normal, 
+  $color: inherit, 
+  $background-color: transparent, 
+  $box-shadow: none
+) {
   padding: $padding;
   border: $border;
   border-radius: $border-radius;
@@ -8,6 +16,7 @@
   background-color: $background-color;
   box-shadow: $box-shadow;
 }
+
 
 .custom-dropdown--parent {
   position: relative;

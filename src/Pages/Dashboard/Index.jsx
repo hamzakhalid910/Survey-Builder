@@ -6,10 +6,12 @@ import StartSurveying from "../../Components/StartSurveying";
 import { SearchTemplates } from "../../Components/Common/SearchTemplate";
 import SurveyTemplates from "../../Components/Common/SurveyTemplates";
 import "./style.scss"; // Import SCSS file for Dashboard styles
+import SvgRenderer from "../../Svg Components";
 
 function Dashboard() {
   return (
     <>
+      
       <div className="dashboard-container">
         <Header />
         <NewSurvey />
