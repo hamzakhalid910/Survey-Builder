@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import DropDown from "../../Icons Svg Components/DropDownIcon";
 import Search from "../../Icons Svg Components/SearchIconPlain";
 import "./style.scss"; // Import the SCSS file
+import SvgIconRenderer from "../../Icons Svg Components";
 
 const CustomDropdown = ({ options, value, onChange, placeholder }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -39,7 +40,7 @@ const CustomDropdown = ({ options, value, onChange, placeholder }) => {
         <Search />
       </div>
       <div className="custom-dropdown--arrow-icon" onClick={handleArrowClick}>
-        <DropDown isOpen={isOpen} />
+      <SvgIconRenderer isOpen={isOpen} type='DropDown'/>
       </div>
 
       {isOpen && (
