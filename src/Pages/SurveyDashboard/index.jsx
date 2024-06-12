@@ -9,7 +9,7 @@ import Header from '../../Components/Common/Header';
 
 function SurveyDashboard() {
   return (
-    <div claas>
+    <div >
       <Header/>
       <LeftMenu />
       <RightMenu />

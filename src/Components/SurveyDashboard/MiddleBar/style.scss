@@ -1,10 +1,9 @@
 .middle-bar--parent {
   position: absolute;
-  top: 89.3px; /* Height of the header */
-  left: 230px; /* Width of the left menu */
-  right: 230px; /* Width of the right menu */
-  height: 70px; /* Adjust height as needed */
-  background-color: #F7F7F6; /* Example background color */
+  left: 15%; /* Assuming the left menu takes 15% of the width */
+  right: 15%; /* Assuming the right menu takes 15% of the width */
+  height: 10%; /* Converted height to percentage of the viewport */
+  background-color: #F7F7F6; 
   border-right: 1px solid #C7DEFF80;
   box-shadow: 2px 4px 5px 0px #0000000D;
   font-weight: 500;
@@ -12,19 +11,27 @@
   .middle-bar--child {
     display: flex;
     align-items: center;
-    padding: 0 50px; /* Adjust padding as needed */
+    padding: 0 5%; /* Converted padding to percentage */
     height: 100%;
   }
 
   .middle-bar--child1 {
-    margin-right: 35vw; /* Adjust margin as needed */
+
+
     
+    margin-right: 60%; /* Keep margin in vw for better responsiveness */
+    display: flex;
     &:last-child {
-      margin-right: 0; /* Remove margin for the last child */
+      margin-right: 0; 
     }
   }
 
   .settings {
-    font-weight: 400; /* Adjust font weight for Settings */
+        
+        font-weight: 400; 
+  }
+  .svg{
+    margin-top: 8%;
+    margin-left: 10% ;
   }
 }

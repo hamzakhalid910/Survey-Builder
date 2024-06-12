@@ -56,8 +56,7 @@ const Form = () => {
 
   return (
     <div className="Form--parent">
-      {/* Static header */}
-      <Header />
+     
 
       {/* Form */}
       <div className="Form--child">
