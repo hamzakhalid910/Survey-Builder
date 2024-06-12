@@ -19,7 +19,7 @@ function Header() {
     <div className="header--parent">
       <div className="logo-container--child1">
         {/* <DashboardLogoSVG /> */}
-        <img src="src\Components\Images\Group 7.png" alt="Builder Logo" />
+        <img src="src\assets\Images\Group 7.png" alt="Builder Logo" />
       </div>
 
       <div className="navigation--child2">
