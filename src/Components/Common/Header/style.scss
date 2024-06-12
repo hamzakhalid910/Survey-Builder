@@ -9,6 +9,9 @@
   align-items: $align;
 }
 
+$primary-font: Lato;
+$primary-color: #1f77b2;
+
 .header--parent {
   display: flex;
   width: 100%;
@@ -17,31 +20,34 @@
 
   .logo-container--child1 {
     margin-left: 8%;
-    overflow: hidden;
-    padding-left: 1rem;
-    width: 9.5%;
-
-    img {
-      object-fit: contain;
+    width: 10%;
+    .logo {
+      justify-content: center;
+      align-items: center;
+      margin-top: 0.15rem;
+      max-height: 100%; // Ensures the logo height does not exceed the parent's height
+      display: block;
     }
   }
 
   .navigation--child2 {
     @include flex-item;
-    width: 34%;
+    width: 40%;
     padding-left: 2%;
 
     button {
       margin-left: 6%;
 
       &.active {
-        color: #3498db;
-        font-weight: 600;
+        color: $primary-color;
+        font-weight: 700;
         text-decoration: underline;
+        // @include lato-font("black");
       }
 
       &.inactive {
         color: #828282;
+        font-weight: 500;
       }
     }
   }
@@ -51,9 +57,9 @@
     width: 15%;
 
     button {
-      color: #3498db;
-      border: 1px solid #3498db;
-      border-radius: 0.5rem;
+      color: $primary-color;
+      border: 1px solid $primary-color;
+      border-radius: 12px;
       padding: 0.5rem;
       font-weight: 600;
     }
@@ -72,7 +78,7 @@
   .user--child6 {
     @include flex-item;
     width: 12%;
-    margin-right: 8vw;
+    margin-right: 8%;
     justify-content: flex-end;
     padding-right: 0.75rem;
   }

@@ -33,7 +33,7 @@ function SurveyTemplates() {
     <>
       <div className="survey-templates">
         <div className="survey-heading">
-          <h1 className="survey-title">Customer Satisfaction Surveys</h1>
+          <h1 className="survey-template-title">Customer Satisfaction Surveys</h1>
         </div>
         <div className="survey-list">
           {Surveys.map((survey, index) => (

@@ -48,7 +48,13 @@ function StartSurveying() {
 
       {/* Build With AI */}
       <div className="survey-option survey-option-ai">
-        <button className="survey-button">
+        <button
+          className="survey-button"
+          onClick={() => {
+            console.log("Here on buttin");
+            navigate("/buildsurveywithai");
+          }}
+        >
           <div className="survey-header">
             <h1 className="survey-title">Build with AI</h1>
             <div className="survey-icon">

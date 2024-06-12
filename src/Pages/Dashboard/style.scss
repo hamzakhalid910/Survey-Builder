@@ -3,6 +3,8 @@
   /* Add any container styles here */
 }
 
+$primary-color: #1f77b2;
+
 .templates-section {
   display: flex;
   margin: 0 8%;
@@ -15,5 +17,8 @@
   padding-top: 2.5%;
   padding-bottom: 1.5%;
   font-weight: bold;
-  color: #3498db;
+  color: $primary-color;
+  margin-top: 2rem;
+  font-weight: 700;
+  font-size: 28px;
 }

@@ -13,7 +13,7 @@ function ListGridView() {
   };
 
   return (
-    <div className="button-container">
+    <div className="List-Grid-button-container">
       <button className={"button"} onClick={handleClick(0)}>
         <div className="icon-container">
           <SvgIconRenderer type='ListIcon' />
