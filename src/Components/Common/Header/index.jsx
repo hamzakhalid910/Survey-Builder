@@ -16,14 +16,13 @@ function Header() {
   };
 
   return (
-    <div className="header-parent">
-      <div className="logo-container-child1">
+    <div className="header--parent">
+      <div className="logo-container--child1">
         {/* <DashboardLogoSVG /> */}
-        <img src="src\Images\Group 7.png" alt="Builder Logo" />
+        <img src="src\Components\Images\Group 7.png" alt="Builder Logo" />
       </div>
 
-
-      <div className="navigation-child2">
+      <div className="navigation--child2">
         {/* Dashboard Button */}
         <button
           className={` ${activeLink === "/dashboard" ? "active" : "inactive"}`}
@@ -42,12 +41,12 @@ function Header() {
       </div>
 
       {/* Upgrade Plan Button */}
-      <div className="upgrade-plan-child3">
+      <div className="upgrade-plan--child3">
         <button>Upgrade Plan</button>
       </div>
 
       {/* Notifications */}
-      <div className="notifications-child4">
+      <div className="notifications--child4">
         <button
           onClick={() => {
             console.log("Notifications");
@@ -58,12 +57,12 @@ function Header() {
       </div>
 
       {/* Language */}
-      <div className="language-child5">
+      <div className="language--child5">
         <Language />
       </div>
 
       {/* User */}
-      <div className="user-child6">
+      <div className="user--child6">
         <User />
       </div>
     </div>

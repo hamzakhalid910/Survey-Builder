@@ -60,8 +60,8 @@ function Language() {
 
   return (
     <>
-      <div className="language-container-parent">
-        <div className="language-selected-child2">
+      <div className="language-container--parent">
+        <div className="language-selected--child2">
           <div className="flag-container">
             <img className="flag" src={selectedFlag} alt="" />
           </div>
