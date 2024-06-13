@@ -1,5 +1,5 @@
 /* RightMenu.scss */
-.right-menu {
+.right-menu--parent {
   position: absolute;
   /* Height of the header */
   right: 0;
@@ -10,5 +10,32 @@
   box-shadow: 2px 4px 5px 0px #0000000D;
   display: flex; /* Add flex display to use flexbox properties */
   flex-direction: column; /* Arrange children vertically */
+
+
+  .right-menu--child1{
+  
+    display: block;
+    margin-top: 5%;
   }
+    .title{
+      font-weight: 500;
+      font-size: 16px;
+      margin-left: 5%;
+    }
+    .message{
+      padding-top: 55%;
+      margin-left:15%;
+      font-size: 12px;
+      color: #828282;
+    }
+    .search{
+      background-color: #828282;
+     
+    }
+    
+  }
+
+  
+  
+  
   

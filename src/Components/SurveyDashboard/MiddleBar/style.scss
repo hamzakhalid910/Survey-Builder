@@ -8,30 +8,39 @@
   box-shadow: 2px 4px 5px 0px #0000000D;
   font-weight: 500;
   
-  .middle-bar--child {
-    display: flex;
-    align-items: center;
-    padding: 0 5%; /* Converted padding to percentage */
-    height: 100%;
-  }
+  
 
   .middle-bar--child1 {
-
-
-    
-    margin-right: 60%; 
+    padding-top: 0.8%;
+    padding-bottom: 0.5%;
+  
     display: flex;
-    &:last-child {
-      margin-right: 0; 
-    }
+   
+  }
+  .employee{
+    margin-left: 4%;
+    width: 72%;
+    font-size: 20px;
   }
 
   .settings {
-        
+    margin-top: 0.3%;
+    
+        font-size: 18px;
         font-weight: 400; 
   }
   .svg{
-    margin-top: 8%;
-    margin-left: 10% ;
+    margin-top: 1%;
+    margin-left: 1% ;
+    margin-right: 2%;
+  }
+  .svg1{
+    margin-left: 2%;
+    margin-bottom: 1;
+  
+    
+  }
+  .view{
+    margin-left:1% ;
   }
 }

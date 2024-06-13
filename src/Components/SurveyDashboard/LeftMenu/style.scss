@@ -1,5 +1,5 @@
 // LeftMenu.scss
-.left-menu {
+.left-menu--parent {
   position: absolute;
 
 
@@ -11,5 +11,22 @@
   display: flex; /* Add flex display to use flexbox properties */
   flex-direction: column; /* Arrange children vertically */
 
+
+.left-menu--child1{
   
+  display: block;
+  margin-top: 5%;
 }
+  .title{
+    font-weight: 500;
+    font-size: 16px;
+    margin-left: 5%;
+  }
+  .message{
+    padding-top: 55%;
+    margin-left:15%;
+    font-size: 12px;
+    color: #828282;
+  }
+}
+
