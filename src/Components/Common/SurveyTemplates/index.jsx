@@ -1,8 +1,10 @@
 // SurveyTemplates.js
-import React from "react";
+import React, { useState } from "react";
 import "./style.scss";
+import ArchiveSVG from "../../../Icons Svg Components/ArchiveSVG";
 
 function SurveyTemplates() {
+  const [active, setActive] = useState("Grid");
   const Surveys = [
     {
       SurveyThumbnail:
@@ -31,32 +33,122 @@ function SurveyTemplates() {
   ];
   return (
     <>
-      <div className="survey-templates">
-        <div className="survey-heading">
-          <h1 className="survey-template-title">Customer Satisfaction Surveys</h1>
-        </div>
-        <div className="survey-list">
-          {Surveys.map((survey, index) => (
-            <div key={index} className="survey-item">
-              <img
-                className="survey-thumbnail"
-                src={survey.SurveyThumbnail}
-                alt={survey.SurveyTitle}
-              />
-              <div className="survey-details">
-                <div className="survey-title">{survey.SurveyTitle}</div>
-                <p className="survey-completion-time">
-                  <span className="label">Est. Completion time: </span>
-                  <span className="value">{survey.completionTime}</span>
-                </p>
+      {active === "Grid" && (
+        <div className="survey-templates">
+          <div className="survey-heading">
+            <h1 className="survey-template-title">
+              Customer Satisfaction Surveys
+            </h1>
+          </div>
+          <div className="survey-list">
+            {Surveys.map((survey, index) => (
+              <div key={index} className="survey-item">
+                <img
+                  className="survey-thumbnail"
+                  src={survey.SurveyThumbnail}
+                  alt={survey.SurveyTitle}
+                />
+                <div className="survey-details">
+                  <div className="survey-IT">
+                    <div className="survey-title">{survey.SurveyTitle}</div>
+                    <div className="Archive-SVG">
+                      <ArchiveSVG />
+                    </div>
+                  </div>
+
+                  <p className="survey-completion-time">
+                    <span className="label">Est. Completion time: </span>
+                    <span className="value">{survey.completionTime}</span>
+                  </p>
+                </div>
+                <div className="survey-button">
+                  <button className="use-template-button">Use Template</button>
+                </div>
               </div>
-              <div className="survey-button">
-                <button className="use-template-button">Use Template</button>
+            ))}
+          </div>
+
+          <div className="survey-heading">
+            <h1 className="survey-template-title">Event Feedback Surveys</h1>
+          </div>
+          <div className="survey-list">
+            {Surveys.map((survey, index) => (
+              <div key={index} className="survey-item">
+                <img
+                  className="survey-thumbnail"
+                  src={survey.SurveyThumbnail}
+                  alt={survey.SurveyTitle}
+                />
+                <div className="survey-details">
+                  <div className="survey-title">{survey.SurveyTitle}</div>
+                  <p className="survey-completion-time">
+                    <span className="label">Est. Completion time: </span>
+                    <span className="value">{survey.completionTime}</span>
+                  </p>
+                </div>
+                <div className="survey-button">
+                  <button className="use-template-button">Use Template</button>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+
+          <div className="survey-heading">
+            <h1 className="survey-template-title">Market Research</h1>
+          </div>
+          <div className="survey-list">
+            {Surveys.map((survey, index) => (
+              <div key={index} className="survey-item">
+                <img
+                  className="survey-thumbnail"
+                  src={survey.SurveyThumbnail}
+                  alt={survey.SurveyTitle}
+                />
+                <div className="survey-details">
+                  <div className="survey-title">{survey.SurveyTitle}</div>
+                  <div>
+                    <ArchiveSVG />
+                  </div>
+                  <p className="survey-completion-time">
+                    <span className="label">Est. Completion time: </span>
+                    <span className="value">{survey.completionTime}</span>
+                  </p>
+                </div>
+                <div className="survey-button">
+                  <button className="use-template-button">Use Template</button>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="survey-heading">
+            <h1 className="survey-template-title">
+              Professional Developer Surveys
+            </h1>
+          </div>
+          <div className="survey-list">
+            {Surveys.map((survey, index) => (
+              <div key={index} className="survey-item">
+                <img
+                  className="survey-thumbnail"
+                  src={survey.SurveyThumbnail}
+                  alt={survey.SurveyTitle}
+                />
+                <div className="survey-details">
+                  <div className="survey-title">{survey.SurveyTitle}</div>
+                  <p className="survey-completion-time">
+                    <span className="label">Est. Completion time: </span>
+                    <span className="value">{survey.completionTime}</span>
+                  </p>
+                </div>
+                <div className="survey-button">
+                  <button className="use-template-button">Use Template</button>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
     </>
   );
 }
