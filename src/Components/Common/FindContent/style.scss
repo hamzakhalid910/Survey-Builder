@@ -10,7 +10,7 @@
       .search-input {
         width: 100%; /* Adjust width as needed */
         height: 80%;
-
+        background-color: #F7F7F6;
         padding: 10px;
         padding-left: 30px;
         font-size: 12px;
@@ -20,13 +20,13 @@
       }
   
       .search-icon {
-        position: absolute;
-        
+        position: absolute; 
         top: 40%;
         transform: translateY(-50%);
         cursor: pointer;
          /* Color of the SVG icon */
       }
+    
     }
   }
   
