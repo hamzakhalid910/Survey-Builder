@@ -7,7 +7,7 @@ function LeftMenu() {
 
       <div className='left-menu--child1'>
         <span className='left-menu--child1 title'>Survey Presenting</span>
-        <span className='left-menu--child1 message'>You don’t have any data yet.</span>
+        <span className='left-menu--child1 message'>You don’t have any data yet...</span>
       </div>
       
     </div>
