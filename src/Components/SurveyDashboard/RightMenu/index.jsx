@@ -1,7 +1,6 @@
 // RightMenu.jsx
 import React from "react";
 import "./style.scss";
-import { SearchTemplates } from "../../Common/SearchTemplate";
 import FindContent from "../../Common/FindContent";
 import ComponentRender from "../../DraggableComponent/ComponentRender";
 
@@ -15,9 +14,8 @@ function RightMenu() {
         </div>
       </div>
       <div>
-      <ComponentRender/>
+        <ComponentRender />
       </div>
-      
     </div>
   );
 }

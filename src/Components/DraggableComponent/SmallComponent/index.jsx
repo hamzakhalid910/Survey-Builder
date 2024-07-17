@@ -15,7 +15,7 @@ const SmallComponent = ({ name }) => {
     <div
       ref={drag}
       className="small-component"
-      style={{ opacity: isDragging ? 0.5 : 1 }}
+      style={{ opacity: isDragging ? 0.5 : 1, cursor: 'pointer' }}
     >
       <span className='name'>{name}</span>
     </div>
