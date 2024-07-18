@@ -1,0 +1,105 @@
+$bg-color: #f2fbffcc;
+$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+  0 4px 6px -2px rgba(0, 0, 0, 0.05);
+$border-color: #E5E7EB;
+body {
+  background-color: $bg-color;
+}
+.header-container {
+  display: flex;
+  margin-top: 5rem;
+  justify-content: center;
+  margin-top: 3%;
+}
+.bulb-icon-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 3%;
+}
+.sample-prompts-container {
+  p {
+    margin-top: 2%;
+    font-size: 24px;
+    font-weight: bolder;
+  }
+}
+.prompt-input-container {
+  padding-left: 8rem;
+  padding-right: 8rem;
+  margin-top: 2rem;
+  .prompt-input-title {
+    font-size: 1rem;
+  }
+}
+.prompt-input-box {
+  margin-top: 2rem;
+  height: 14rem;
+  margin-bottom: 1rem;
+  border-width: 2px;
+  border-radius: 0.5rem;
+  background-color: white;
+  padding: 1rem;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; // Ensure the button is at the bottom
+  .form-textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    flex-grow: 1; // Take up remaining space
+  }
+  .form-submit-button {
+    align-self: flex-end; // Ensure it stays at the bottom
+    padding: 0.5rem 1rem;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    &:hover {
+      background-color: #0056B3;
+    }
+  }
+}
+.dropdown-container {
+  width: 100%;
+  justify-content: flex-start;
+  padding-left: 8.5%;
+  p {
+    margin: 0;
+  }
+  .tips {
+    margin-top: 1%;
+    li {
+      display: flex;
+    }
+    p {
+      font-size: 10px;
+      padding-top: 0.4%;
+    }
+  }
+}
+.promp-templates {
+  margin-top: 5%;
+  padding-left: 8%;
+  padding-right: 8%;
+  margin-bottom: 10%;
+  display: flex;
+  .promps-container {
+    margin-left: 6%;
+    width: 25%;
+    h1 {
+      text-align: center;
+      font-size: 24px;
+      font-weight: bolder;
+    }
+    p {
+      margin-top: 10%;
+      padding-left: 5%;
+      padding-right: 5%;
+      padding-bottom: 8%;
+      font-size: 18px;
+    }
+  }
+}

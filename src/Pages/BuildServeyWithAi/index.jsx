@@ -1,128 +1,105 @@
 
-
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import bulbSVG from "../../Icons Svg Components/bulbSVG";
+import BulbSVG from "../../Icons Svg Components/bulbSVG";
 import React from "react";
 import Header from "../../Components/Common/Header";
-
+import "./style.scss";
+import SvgRenderer from "../../Svg Components";
+import { useState } from "react";
 
 function BuildSurveyWithAi() {
-  const objects = [
-    {
-      title: "Customer Satisfaction",
-      description:
-        "I work for a consulting firm and we're looking to gather feedback from our clients about their experience working with us. The survey should cover customer experience topics like the quality of our services, communication with our team, responsiveness to issues, overall satisfaction with our consulting firm, and whether they would recommend us to colleagues. We’d like to know the business industry and size for the respondents.",
-    },
-    {
-      title: "Education",
-      description:
-        "Our university is conducting a survey on student satisfaction. We are interested in their opinions on the quality of teaching, research opportunities, various facilities like the libraries and dining halls, and student extracurricular activities. Include student demographics like year of graduation, gender, and age.",
-    },
-    {
-      title: "Employee Experience",
-      description:
-        "We need a survey for employee exit interviews. The survey should assess how the departing employee feels about various aspects of the company culture, such as diversity, equity, and inclusion, whether their work was meaningful, their opinion on working with their team and supervisor, and their reasons for leaving. Include questions on the employee’s level and department.",
-    },
-    {
-      title: "Event Feedback",
-      description:
-        "My company is hosting a webinar for the first time. We want to survey attendees after the event to get feedback on how it went. We’d like to know their overall impression, whether they would attend another webinar, and their opinions on how well the event was organized and the length. We also want feedback on the quality of the moderator and the speaker and whether the webinar was useful.",
-    },
-    {
-      title: "New 1",
-      description:
-        "I work for a consulting firm and we're looking to gather feedback from our clients about their experience working with us. The survey should cover customer experience topics like the quality of our services, communication with our team, responsiveness to issues, overall satisfaction with our consulting firm, and whether they would recommend us to colleagues. We’d like to know the business industry and size for the respondents.",
-    },
-    {
-      title: "New 2",
-      description:
-        "I work for a consulting firm and we're looking to gather feedback from our clients about their experience working with us. The survey should cover customer experience topics like the quality of our services, communication with our team, responsiveness to issues, overall satisfaction with our consulting firm, and whether they would recommend us to colleagues. We’d like to know the business industry and size for the respondents.",
-    },
-  ];
-
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
-
+  const [showPrompts, setShowPrompts] = useState(false);
+ 
+ 
   return (
     <>
       <div>
-        <Header/>
+        <Header />
       </div>
-      <div className="bg-[#F2FBFFCC]">
-        <div className="flex ">
-          <div className="w-full px-4 sm:px-32 mt-20 ">
-            <p className="font-bold text-lg">
-              Create a new Survey form With AI
-            </p>
-            <p className="mt-[1%] text-xs">
-              Please provide an example prompt or create one yourself.
-            </p>
+      <div className="background-container">
+        <div className="header-container flex">
+          <div className="bulb-container">
+            <div className="bulb-icon-container ">
+              <BulbSVG />
+            </div>
+            <div className="sample-prompts-container">
+              <p>Create a new Survey form With AI</p>
+            </div>
           </div>
-          <div></div>
         </div>
-        <div className="flex justify-center mt-[3%] ">
-            <BulbSVG />
-        </div>
-        <div>
-          <p className="text-center  text-xs mt-[1%]">
-            Would you like to try one of our sample prompts?
+        <div className="prompt-input-container">
+          <p className="prompt-input-title">
+            Tell us what you want to build Survey Form with AI Prompt:
           </p>
-          <div className="px-32 mt-8 h-[80%] space-x-11">
-            <Slider {...settings}>
-              {objects.map((obj, index) => (
-                <div
-                  key={index}
-                  className="relative p-4 border-2 px-2  shadow-lg"
-                >
-                  <div className="  rounded-lg h-80 p-4">
-                    <h3 className="font-bold text-lg">{obj.title}</h3>
-                    <p className="mt-2 text-sm">{obj.description}</p>
-                    <button className="absolute bottom-4 left-1/2 transform -translate-x-1/2  px-2 bg-gray-200  text-black rounded">
-                      Insert into prompt
-                    </button>
-                  </div>
-                </div>
-              ))}
-            </Slider>
+          <form className="prompt-input-box  border-2 rounded-lg">
+            <textarea
+              type="text"
+              className="form-textarea"
+              placeholder="Enter your prompt here"
+            />
+            <button type="submit" className="form-submit-button">
+              Submit
+            </button>
+          </form>
+        </div>
+        <div className="dropdown-container">
+          <p>Tips</p>
+          <div className="tips">
+            <p>
+              Clearly state your question with all necessary details to avoid
+              ambiguity.
+            </p>
+            <p>
+              Include examples or show what you’ve tried to help clarify your
+              request.
+            </p>
+            <p>
+              If your question is complex, break it down into smaller parts to
+              make it easier to understand and answer.
+            </p>
+            <p>
+              Provide context or background information to help better
+              understand your query.
+            </p>
+            <p>
+              Clearly mention what you aim to achieve or the desired outcome of
+              your query.
+            </p>
+            <p>
+              When asking about code, include relevant code snippets to
+              illustrate your issue or question.
+            </p>
           </div>
-          <div className="text-center mt-8 font-bold">
-            <p>what type of form do you want to create?</p>
+        </div>
+        <div className="row promp-templates">
+          <div className=" promps-container">
+            <h1>Example 1</h1>
+            <p>
+              Can you explain the main causes of World War I and how each
+              contributed to the outbreak of the war?
+            </p>
           </div>
-          <div className="px-32 mt-8 ">
-            <p>Tell us what you want to build Survey Form with AI Prompt:</p>
+          <div className=" promps-container">
+            <h1>Example 2</h1>
+            <p>
+              I'm learning Python and need help with a function that returns the
+              factorial of a number. Can you provide a simple example and
+              explain how it works?
+            </p>
           </div>
-          <div className="mx-32 mt-8 h-40 mb-10 border-2 rounded-lg"></div>
-
-          <div className="px-32">
-            <p>Prompt Tips</p>
+          <div className=" promps-container">
+            <h1>Example 2</h1>
+            <p>
+              I'm planning a trip to Japan for two weeks. What are the must-see
+              attractions in Tokyo and Kyoto, and any tips for first-time
+              travelers?
+            </p>
           </div>
         </div>
       </div>
     </>
   );
 }
-
 export default BuildSurveyWithAi;

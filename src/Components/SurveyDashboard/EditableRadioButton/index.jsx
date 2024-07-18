@@ -1,8 +1,7 @@
-
 import PropTypes from 'prop-types';
 import './style.scss';
 
-const EditableQuestion = ({ item, onUpdate }) => {
+const EditableRadioButton = ({ item, onUpdate }) => {
   const handleTextChange = (e) => {
     onUpdate(item.id, { ...item, text: e.target.value });
   };
@@ -14,25 +13,25 @@ const EditableQuestion = ({ item, onUpdate }) => {
   };
 
   const handleAddOption = () => {
-    const newOptions = [...item.options, `Option ${item.options.length + 1}`];
-    onUpdate(item.id, { ...item, options: newOptions });
+    const newOption = [...item.options, `Option ${item.options.length + 1}`];
+    onUpdate(item.id, { ...item, options: newOption });
   };
 
   return (
-    <div className="editable-question">
-      <input className='title' type="text" value={item.text} onChange={handleTextChange} />
+    <div className="editable-radio-button">
+      <input className="editable-radio-button__title" type="text" value={item.text} onChange={handleTextChange} />
       {item.options.map((option, index) => (
-        <div key={index} className="option">
-          <input type="radio" name={`multiple-choice-${item.id}`} />
+        <div key={index} className="editable-radio-button__option">
+          <input type="radio" name={`radio-button-${item.id}`} />
           <input type="text" value={option} onChange={(e) => handleOptionChange(index, e)} />
         </div>
       ))}
-      <button className="editable-question__add-option" onClick={handleAddOption}>Add Option</button>
+      <button className="editable-radio-button__add-option" onClick={handleAddOption}>Add Option</button>
     </div>
   );
 };
 
-EditableQuestion.propTypes = {
+EditableRadioButton.propTypes = {
   item: PropTypes.shape({
     id: PropTypes.number.isRequired,
     text: PropTypes.string.isRequired,
@@ -41,4 +40,4 @@ EditableQuestion.propTypes = {
   onUpdate: PropTypes.func.isRequired,
 };
 
-export default EditableQuestion;
+export default EditableRadioButton;

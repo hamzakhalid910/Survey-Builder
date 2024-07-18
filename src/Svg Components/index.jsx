@@ -15,6 +15,7 @@ const SvgRenderer = ({ type, color }) => {
     location: <LocationSVG color={color || "none"} />,
     view: <ViewSVG color={color || "none"} />,
   };
+  return svgs[type]
 };
 
 export default SvgRenderer;
