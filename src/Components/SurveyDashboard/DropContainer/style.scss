@@ -1,0 +1,18 @@
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 1%;
+  }
+  
+  .left-menu--parent, .right-menu--parent {
+    width: 20%;
+    /* Additional styling if needed */
+  }
+  
+  .center-content {
+    flex: 1;
+    background-color: lightgrey;
+    height: 100vh; /* Adjust as needed */
+    margin: 90px 350px; /* Adjust as needed */
+  }
+  
