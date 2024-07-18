@@ -1,9 +1,13 @@
 .user-container {
   display: flex;
+  width: 12vw;
+  align-items: right;
+  justify-content: right;
+  
 }
 
 .user-name {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .dropdown-button {
