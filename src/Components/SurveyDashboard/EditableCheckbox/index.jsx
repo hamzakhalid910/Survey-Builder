@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types';
 import './style.scss';
 
-const EditableQuestion = ({ item, onUpdate }) => {
+const EditableCheckbox = ({ item, onUpdate }) => {
   const handleTextChange = (e) => {
     onUpdate(item.id, { ...item, text: e.target.value });
   };
@@ -19,20 +19,20 @@ const EditableQuestion = ({ item, onUpdate }) => {
   };
 
   return (
-    <div className="editable-question">
+    <div className="editable-checkbox">
       <input className='title' type="text" value={item.text} onChange={handleTextChange} />
       {item.options.map((option, index) => (
         <div key={index} className="option">
-          <input type="radio" name={`multiple-choice-${item.id}`} />
+          <input type="checkbox" />
           <input type="text" value={option} onChange={(e) => handleOptionChange(index, e)} />
         </div>
       ))}
-      <button className="editable-question__add-option" onClick={handleAddOption}>Add Option</button>
+      <button onClick={handleAddOption}>Add Option</button>
     </div>
   );
 };
 
-EditableQuestion.propTypes = {
+EditableCheckbox.propTypes = {
   item: PropTypes.shape({
     id: PropTypes.number.isRequired,
     text: PropTypes.string.isRequired,
@@ -41,4 +41,4 @@ EditableQuestion.propTypes = {
   onUpdate: PropTypes.func.isRequired,
 };
 
-export default EditableQuestion;
+export default EditableCheckbox;
