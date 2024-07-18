@@ -1,23 +1,33 @@
-import React from 'react';
+import PropTypes from 'prop-types'; // Import PropTypes
 import SmallComponent from '../SmallComponent/index';
 import './style.scss';
 
-const ComponentRender = () => {
+const ComponentRender = ({ searchTerm }) => {
   const componentsData = [
     { name: 'Radio Button' },
-    { name: 'Text Box' },
     { name: 'Drop Down' },
+    { name: 'Email' },
     { name: 'Check Box' },
     { name: 'Multiple Choice' },
   ];
 
+  const filteredComponents = componentsData.filter(component =>
+    component.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <div className='hey'>
-      {componentsData.map((data, index) => (
+      
+      {filteredComponents.map((data, index) => (
+        
         <SmallComponent key={index} name={data.name} />
       ))}
     </div>
   );
+};
+
+ComponentRender.propTypes = {
+  searchTerm: PropTypes.string.isRequired,
 };
 
 export default ComponentRender;

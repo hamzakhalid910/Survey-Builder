@@ -16,7 +16,8 @@ const SvgRenderer = ({ type, color }) => {
     view: <ViewSVG color={color || "none"} />,
   };
 
-  return svgs[type];
+  return svgs[type]
+
 };
 
 export default SvgRenderer;
