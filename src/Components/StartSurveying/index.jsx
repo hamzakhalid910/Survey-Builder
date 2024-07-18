@@ -32,7 +32,12 @@ function StartSurveying() {
 
       {/* Use a Quick Template Button */}
       <div className="survey-option survey-option-template">
-        <button className="survey-button">
+        <button
+          className="survey-button"
+          onClick={() => {
+            navigate("/quicktemplates");
+          }}
+        >
           <div className="survey-header">
             <h1 className="survey-title">Use a quick template</h1>
             <div className="survey-icon">
