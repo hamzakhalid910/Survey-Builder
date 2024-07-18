@@ -1,0 +1,16 @@
+// style.scss
+
+.create-survey-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; // Full height of the viewport
+  }
+  
+  .form-container {
+    flex: 1; // Takes the remaining space after the header
+    background-color: #F8FAFC; // Light grey background
+    
+     // Center content horizontally if needed
+  }
+  
+ 

@@ -5,3 +5,4 @@ export { default as CreateSurvey } from "./CreateSurvey/index";
 export { default as BuildSurveyWithAi } from "./BuildServeyWithAi/index";
 export { default as SurveyDashboard } from "./SurveyDashboard/index";
 export { default as MySurveys } from "./My Surveys";
+export {default as Dnd} from "../Components/Dnd/index"
