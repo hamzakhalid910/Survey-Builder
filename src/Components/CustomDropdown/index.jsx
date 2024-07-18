@@ -40,7 +40,7 @@ const CustomDropdown = ({ options, value, onChange, placeholder }) => {
         <Search />
       </div>
       <div className="custom-dropdown--arrow-icon" onClick={handleArrowClick}>
-      <SvgIconRenderer isOpen={isOpen} type='DropDown'/>
+        <SvgIconRenderer isOpen={isOpen} type="DropDown" />
       </div>
 
       {isOpen && (

@@ -12,22 +12,20 @@ $paragraph-color: #718096; // Assuming this is your paragraph color, adjust as n
 }
 
 .Form--parent {
-  min-height: 100vh;
+  
   background-color: #F8FAFC;
-  display: flex;
-  flex-direction: column;
+  
   align-items: center;
 
   .Form--child {
-    display: flex;
-    flex-direction: column;
+ 
     width: 100%;
     padding: 1rem 6rem;
     margin-top: 5rem;
 
     form {
       max-width: 60rem;
-
+      
       .Form--child1 {
         &--title {
           @include common-styles(1.3rem, 500, $primary-color, 1rem);

@@ -1,0 +1,32 @@
+.find-content--parent {
+    display: flex;
+     /* Centers the search bar horizontally */
+    margin-top: 20px; /* Adjust margin as needed */
+    padding-left: 5%;
+    background-color: #F7F7F6;
+    .find-content--child {
+      position: relative; /* Required for positioning the icon */
+        
+      .search-input {
+        width: 100%; /* Adjust width as needed */
+        height: 80%;
+        background-color: #F7F7F6;
+        padding: 10px;
+        padding-left: 30px;
+        font-size: 12px;
+        border: 0.6px solid #00000066;
+        border-radius: 4px; /* Adjust border-radius for rounded corners */
+        outline: none; /* Remove default focus outline */
+      }
+  
+      .search-icon {
+        position: absolute; 
+        top: 40%;
+        transform: translateY(-50%);
+        cursor: pointer;
+         /* Color of the SVG icon */
+      }
+    
+    }
+  }
+  

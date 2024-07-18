@@ -22,6 +22,7 @@ function Header() {
         <div className="logo">
           <SvgRenderer type="SurveyBuilderSVG" />
         </div>
+
       </div>
 
       <div className="navigation--child2">
