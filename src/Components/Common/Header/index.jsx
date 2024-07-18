@@ -5,6 +5,7 @@ import Language from "../Language/index";
 import { useNavigate } from "react-router-dom";
 import "./style.scss";
 import SvgRenderer from "../../../Svg Components";
+import SurveyBuilderSVG from "../../../Svg Components/SurveyBuilderSVG";
 
 function Header() {
   const [activeLink, setActiveLink] = useState(location.pathname);
@@ -18,8 +19,10 @@ function Header() {
   return (
     <div className="header--parent">
       <div className="logo-container--child1">
-        {/* <DashboardLogoSVG /> */}
-        <img src="src\assets\Images\Group 7.png" alt="Builder Logo" />
+        <div className="logo">
+          <SvgRenderer type="SurveyBuilderSVG" />
+        </div>
+
       </div>
 
       <div className="navigation--child2">
@@ -52,7 +55,7 @@ function Header() {
             console.log("Notifications");
           }}
         >
-         <SvgRenderer type='Notification'/>
+          <SvgRenderer type="Notification" />
         </button>
       </div>
 

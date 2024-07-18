@@ -70,7 +70,7 @@ function Language() {
 
         <div className="dropdown-toggle">
           <button className="dropdown-button" onClick={toggleDropDown}>
-            <SvgRenderer type='dropDown'/>
+            <SvgRenderer type="dropDown" color="#1F77B2" />
           </button>
         </div>
         {showDropDown && (

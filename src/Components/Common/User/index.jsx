@@ -47,8 +47,8 @@ export function User() {
   return (
     <div className="user-container">
       <h1 className="user-name">{userObject.user1}</h1>
-      <button className="dropdown-button" onClick={toggleDropDown}>
-        <SvgRenderer type='dropDown'/>
+      <button className="dropdown-button " onClick={toggleDropDown}>
+        <SvgRenderer type='dropDown' color="#1F77B2"/>
       </button>
       {showDropDown && <DropDownMenu />}
     </div>
