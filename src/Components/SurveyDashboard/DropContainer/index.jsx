@@ -45,7 +45,7 @@ const MainContainer = () => {
       className="main-container"
       style={{
         border: '2px dashed black',
-        minHeight: '100%',
+        minHeight: '500px',
         padding: '16px',
         margin: '90px',
         marginLeft: '20%',
