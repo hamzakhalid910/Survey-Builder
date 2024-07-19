@@ -1,6 +1,8 @@
+
 .editable-radio-button {
   margin-bottom: 24px;
   padding: 16px;
+  padding-top: 0;
   border: 1px solid #ccc;
   border-radius: 8px;
   background-color: #fff;
@@ -21,7 +23,7 @@
 
     input[type="text"] {
       display:flex;
-      width: 100%;
+      width: 30%;
       margin-left: 8px;
       padding: 8px;
       border: 1px solid #ddd;
