@@ -3,9 +3,9 @@ import React, { useState } from "react";
 import "./style.scss";
 import ArchiveSVG from "../../../Icons Svg Components/ArchiveSVG";
 
-function SurveyTemplates({ listGrid }) {
+function SurveyTemplates({ listGrid, searchInput }) {
   // const [active, setActive] = useState("");
-  const Surveys = [
+  const AllSurveys = [
     {
       SurveyThumbnail:
         "https://cdn.corporatefinanceinstitute.com/assets/customer-satisfaction-1024x800.jpeg",
@@ -31,6 +31,11 @@ function SurveyTemplates({ listGrid }) {
       completionTime: "7 MINS",
     },
   ];
+
+  const Surveys = AllSurveys.filter((Surveys) =>
+    Surveys.SurveyTitle.toLowerCase().includes(searchInput.toLowerCase())
+  );
+
   return (
     <>
       {listGrid === "Grid" && (
@@ -194,18 +199,11 @@ function SurveyTemplates({ listGrid }) {
                     <span className="label">Est. Completion time: </span>
                     <span className="value">{survey.completionTime}</span>
                   </p>
-                  
                 </div>
 
-
                 <div className="survey-button">
-                    <button className="use-template-button">
-                      Use Template
-                    </button>
-                  </div>
-
-
-                
+                  <button className="use-template-button">Use Template</button>
+                </div>
               </div>
             ))}
           </div>

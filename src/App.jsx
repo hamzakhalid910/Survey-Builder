@@ -26,6 +26,14 @@ function App() {
 
   console.log(listGrid);
 
+  // Search Template Input
+  const [searchInput, setSearchInput] = useState("");
+
+  const handleSearchInput = (search) => {
+    setSearchInput(search);
+  };
+  console.log(searchInput);
+
   return (
     <Router>
       <Routes>
@@ -36,7 +44,12 @@ function App() {
         <Route
           path="/dashboard"
           element={
-            <Dashboard updateListGrid={updateListGrid} listGrid={listGrid} />
+            <Dashboard
+              updateListGrid={updateListGrid}
+              listGrid={listGrid}
+              handleSearchInput={handleSearchInput}
+              searchInput={searchInput}
+            />
           }
         />
         <Route path="/mysurveys" element={<MySurveys />}></Route>
@@ -50,6 +63,8 @@ function App() {
             <QuickTemplates
               updateListGrid={updateListGrid}
               listGrid={listGrid}
+              handleSearchInput={handleSearchInput}
+              searchInput={searchInput}
             />
           }
         ></Route>

@@ -20,7 +20,9 @@ function Header() {
     <div className="header--parent">
       <div className="logo-container--child1">
         <div className="logo">
-          <SvgRenderer type="SurveyBuilderSVG" />
+          <button onClick={() => navigate("/dashboard")}>
+            <SvgRenderer type="SurveyBuilderSVG" />
+          </button>
         </div>
       </div>
 
