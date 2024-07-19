@@ -182,7 +182,7 @@ function BuildSurveyWithAi() {
             </p>
           </div>
           <div className=" promps-container">
-            <h1>Example 2</h1>
+            <h1>Example 3</h1>
             <p>
               I'm planning a trip to Japan for two weeks. What are the must-see
               attractions in Tokyo and Kyoto, and any tips for first-time
