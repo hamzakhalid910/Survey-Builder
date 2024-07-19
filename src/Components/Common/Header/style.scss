@@ -83,3 +83,27 @@ $primary-color: #1f77b2;
     padding-right: 0.75rem;
   }
 }
+@media screen and (max-width: 768px) {
+  .header--parent {
+    .logo-container--child1 {
+      width: 25%;
+      border: 1px solid red;
+      // .logo {
+      //   max-height: 80%;
+      //   width: 20%;
+      // }
+    }
+
+    .navigation--child2{
+      width: 50%;
+      border: 1px solid;
+    }
+
+    .upgrade-plan--child3,
+    .notifications--child4,
+    .language--child5,
+    .user--child6 {
+      display: none;
+    }
+  }
+}

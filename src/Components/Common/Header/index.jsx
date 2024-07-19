@@ -69,6 +69,10 @@ function Header() {
       <div className="user--child6">
         <User />
       </div>
+
+      <div>
+        <button></button>
+      </div>
     </div>
   );
 }
