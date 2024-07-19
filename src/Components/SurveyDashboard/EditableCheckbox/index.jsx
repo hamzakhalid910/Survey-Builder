@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types';
 import './style.scss';
 
-const EditableCheckbox = ({ item, onUpdate }) => {
+const EditableCheckbox = ({ item, onUpdate,onRemove }) => {
   const handleTextChange = (e) => {
     onUpdate(item.id, { ...item, text: e.target.value });
   };
@@ -18,16 +18,26 @@ const EditableCheckbox = ({ item, onUpdate }) => {
     onUpdate(item.id, { ...item, options: newOptions });
   };
 
+
+
+  
+  const removeOption = (index) => {
+    const newOptions = item.options.filter((_, i) => i !== index);
+    onUpdate(item.id, { ...item, options: newOptions });
+  };
+
   return (
     <div className="editable-checkbox">
+      <button className="editable-dropdown__close" onClick={() => onRemove(item.id)}>×</button>
       <input className='title' type="text" value={item.text} onChange={handleTextChange} />
       {item.options.map((option, index) => (
         <div key={index} className="option">
           <input type="checkbox" />
           <input type="text" value={option} onChange={(e) => handleOptionChange(index, e)} />
+          <button className="editable-dropdown__option-remove" onClick={() => removeOption(index)}>Remove</button>
         </div>
       ))}
-      <button onClick={handleAddOption}>Add Option</button>
+      <button className="editable-dropdown__add-option" onClick={handleAddOption}>Add Option</button>
     </div>
   );
 };
@@ -39,6 +49,7 @@ EditableCheckbox.propTypes = {
     options: PropTypes.arrayOf(PropTypes.string).isRequired,
   }).isRequired,
   onUpdate: PropTypes.func.isRequired,
+  onRemove: PropTypes.func.isRequired,
 };
 
 export default EditableCheckbox;

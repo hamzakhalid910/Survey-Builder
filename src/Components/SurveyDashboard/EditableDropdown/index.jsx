@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import './style.scss'; // Import the SCSS file
 
-const EditableDropdown = ({ item, onUpdate }) => {
+const EditableDropdown = ({ item, onUpdate, onRemove }) => {
   const handleTextChange = (e) => {
     onUpdate(item.id, { ...item, text: e.target.value });
   };
@@ -23,6 +23,7 @@ const EditableDropdown = ({ item, onUpdate }) => {
 
   return (
     <div className="editable-dropdown">
+      <button className="editable-dropdown__close" onClick={() => onRemove(item.id)}>×</button>
       <input className="editable-dropdown__title" type="text" value={item.text} onChange={handleTextChange} />
       <select className="editable-dropdown__select">
         {item.options.map((option, index) => (
@@ -47,6 +48,7 @@ EditableDropdown.propTypes = {
     options: PropTypes.arrayOf(PropTypes.string).isRequired,
   }).isRequired,
   onUpdate: PropTypes.func.isRequired,
+  onRemove: PropTypes.func.isRequired,
 };
 
 export default EditableDropdown;

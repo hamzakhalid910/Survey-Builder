@@ -3,6 +3,7 @@
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 16px;
+  padding-top: 0;
   margin-bottom: 16px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
@@ -31,7 +32,7 @@
 
     input[type='text'] {
       display:flex;
-      width: 100%;
+      width: 30%;
         padding: 8px;
         border: 1px solid #ddd;
         border-radius: 4px;

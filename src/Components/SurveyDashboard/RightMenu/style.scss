@@ -1,15 +1,15 @@
 /* RightMenu.scss */
 .right-menu--parent {
   position: absolute;
-  /* Height of the header */
+
   right: 0;
-  height: 100%;  /* Full height minus height of the header */
-  width: 15%; /* Adjust width as needed */
+  height: 100%;   
+  width: 15%; 
   background-color: #F7F7F6; 
   border-right: 1px solid #C7DEFF80;
   box-shadow: 2px 4px 5px 0px #0000000D;
-  display: flex; /* Add flex display to use flexbox properties */
-  flex-direction: column; /* Arrange children vertically */
+  display: flex;
+  flex-direction: column; 
 
 
   .right-menu--child1{
