@@ -1,21 +1,25 @@
 $bg-color: #f2fbffcc;
 $shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
   0 4px 6px -2px rgba(0, 0, 0, 0.05);
-$border-color: #E5E7EB;
+$border-color: #e5e7eb;
+
 body {
   background-color: $bg-color;
 }
+
 .header-container {
   display: flex;
   margin-top: 5rem;
   justify-content: center;
   margin-top: 3%;
 }
+
 .bulb-icon-container {
   display: flex;
   justify-content: center;
   margin-top: 3%;
 }
+
 .sample-prompts-container {
   p {
     margin-top: 2%;
@@ -23,83 +27,163 @@ body {
     font-weight: bolder;
   }
 }
+
 .prompt-input-container {
   padding-left: 8rem;
   padding-right: 8rem;
   margin-top: 2rem;
+
   .prompt-input-title {
     font-size: 1rem;
   }
-}
-.prompt-input-box {
-  margin-top: 2rem;
-  height: 14rem;
-  margin-bottom: 1rem;
-  border-width: 2px;
-  border-radius: 0.5rem;
-  background-color: white;
-  padding: 1rem;
-  border: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; // Ensure the button is at the bottom
-  .form-textarea {
-    width: 100%;
-    padding: 0.5rem;
-    margin-bottom: 0.5rem;
-    flex-grow: 1; // Take up remaining space
-  }
-  .form-submit-button {
-    align-self: flex-end; // Ensure it stays at the bottom
-    padding: 0.5rem 1rem;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 0.25rem;
-    cursor: pointer;
-    &:hover {
-      background-color: #0056B3;
-    }
+  .gpt-box {
+    height: 400px;
+    margin-top: 1%;
   }
 }
+
 .dropdown-container {
   width: 100%;
+
   justify-content: flex-start;
   padding-left: 8.5%;
-  p {
+
+  .tip-heading {
     margin: 0;
+    font-size: 20px;
   }
+
   .tips {
     margin-top: 1%;
+
     li {
       display: flex;
     }
+
     p {
       font-size: 10px;
       padding-top: 0.4%;
     }
   }
 }
+
 .promp-templates {
   margin-top: 5%;
   padding-left: 8%;
   padding-right: 8%;
   margin-bottom: 10%;
+
   display: flex;
+
   .promps-container {
-    margin-left: 6%;
-    width: 25%;
+    width: 30%;
+    margin-left: 2%;
+    background-color: #e4e8ed;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
     h1 {
       text-align: center;
       font-size: 24px;
       font-weight: bolder;
+      margin-top: 3%;
+      color: #0056b3;
     }
     p {
-      margin-top: 10%;
-      padding-left: 5%;
+      margin-top: 5%;
+      padding-left: 7%;
       padding-right: 5%;
       padding-bottom: 8%;
       font-size: 18px;
     }
+  }
+}
+
+@media screen and (min-width: 760px) and (max-width: 992px) {
+  .promp-templates {
+    margin-top: 5%;
+
+    margin-bottom: 10%;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    .promps-container {
+      border: 1px solid;
+      margin-left: 1%;
+      width: 40%;
+      padding-left: 7%;
+      padding-right: 5%;
+      margin-left: 5%;
+      margin-top: 1%;
+
+      h1 {
+        text-align: center;
+        font-size: 24px;
+        font-weight: bolder;
+      }
+      p {
+        margin-top: 10%;
+
+        padding-bottom: 8%;
+        font-size: 18px;
+      }
+    }
+  }
+  .prompt-input-container {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    margin-top: 2rem;
+  }
+  .gpt-box {
+    height: 300px;
+    margin-top: 1%;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .promp-templates {
+    margin-top: 5%;
+
+    margin-bottom: 10%;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    .promps-container {
+      border: 1px solid;
+      margin-left: 1%;
+      width: 80%;
+      padding-left: 7%;
+      padding-right: 5%;
+      margin-left: 10%;
+      margin-top: 1%;
+
+      h1 {
+        text-align: center;
+        font-size: 24px;
+        font-weight: bolder;
+      }
+      p {
+        margin-top: 10%;
+
+        padding-bottom: 8%;
+        font-size: 18px;
+      }
+    }
+  }
+  .prompt-input-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-top: 2rem;
+  }
+  .gpt-box {
+    height: 300px;
+    margin-top: 1%;
+  }
+  .sample-prompts-container {
+    margin-left: 2rem;
   }
 }
