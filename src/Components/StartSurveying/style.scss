@@ -36,6 +36,7 @@
   text-align: start;
   width: 100%;
   padding: 1.75rem;
+  // height: 100%;
 }
 
 .survey-header {
@@ -58,4 +59,31 @@
 .survey-description {
   color: #828282;
   padding-top: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .survey-container {
+    // border: 1px solid green;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  .survey-option {
+    width: auto;
+    justify-content: space-between;
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+
+  .survey-option-scratch {
+    background-color: rgba(211, 239, 248, 0.5); // #D3EFF880
+    // margin-left: 8%;
+    // width: 90%;
+  }
+
+  .survey-option-ai {
+    display: block;
+  }
 }

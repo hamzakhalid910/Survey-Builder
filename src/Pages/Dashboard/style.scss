@@ -22,3 +22,9 @@ $primary-color: #1f77b2;
   font-weight: 700;
   font-size: 28px;
 }
+
+@media screen and (max-width:768px){
+  .section-title{
+    width: 100%;
+  }
+}
